@@ -2,8 +2,8 @@
 
 ## Team Members
 - Razan Habboub
-- Teammate 2
-- Teammate 3
+- Anna Li
+- Isabel Delgado
 
 ## Project Overview
 
