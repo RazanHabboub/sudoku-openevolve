@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .ipynb_checkpoints/
 .env
+data/archive/
+data/tdoku/data/
+data/tdoku/data.zip

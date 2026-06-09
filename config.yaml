@@ -1,0 +1,28 @@
+max_iterations: 100
+checkpoint_interval: 5
+log_level: INFO
+random_seed: 42
+
+llm:
+  api_base: "https://api.openai.com/v1"
+  api_key: "${OPENAI_API_KEY}"
+  primary_model: "gpt-4o"
+  temperature: 0.7
+  max_tokens: 4096
+
+prompt:
+  template_dir: "prompts"
+  num_top_programs: 3
+  num_diverse_programs: 2
+
+database:
+  population_size: 50
+  num_islands: 3
+  migration_interval: 10
+
+evaluator:
+  timeout: 300
+  cascade_evaluation: false
+  parallel_evaluations: 1
+
+diff_based_evolution: true
