@@ -22,3 +22,52 @@
 2026-06-09 15:11:09,805 - INFO - Starting process-based evolution from iteration 1 for 500 iterations (total: 501)
 2026-06-09 15:11:22,418 - INFO - Early stopping enabled: patience=100, threshold=0.005, metric=combined_score
 Evaluation timed out after 300s
+C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+2026-06-09 15:22:27,043 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-06-09 15:22:27,044 - INFO - Iteration 1: Program 8a1b8fff-d030-4b39-a9e9-cd4cf3510d60 (parent: 40753ec7-2de1-41a1-a480-5032142c76af) completed in 664.26s
+2026-06-09 15:22:27,044 - INFO - Metrics: error=0.0000, timeout=1.0000
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 66-67: character maps to <undefined>
+Call stack:
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 40, in <module>
+    asyncio.run(main())
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 712, in run_until_complete
+    self.run_forever()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 683, in run_forever
+    self._run_once()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 2042, in _run_once
+    handle._run()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 29, in main
+    best = await oe.run(iterations=config.max_iterations)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 369, in run
+    await self._run_evolution_with_checkpoints(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 515, in _run_evolution_with_checkpoints
+    await self.parallel_controller.run_evolution(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\process_parallel.py", line 652, in run_evolution
+    logger.warning(
+Message: "\u26a0\ufe0f  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.5000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance."
+Arguments: ()
+2026-06-09 15:22:27,044 - WARNING - \u26a0\ufe0f  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.5000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+Timeout on attempt 1/4. Retrying...
+Timeout on attempt 2/4. Retrying...
+Timeout on attempt 3/4. Retrying...
+All 4 attempts failed with timeout
+LLM generation failed: 
+2026-06-09 15:31:44,024 - WARNING - Iteration 2 error: LLM generation failed: 
+Timeout on attempt 1/4. Retrying...
+Timeout on attempt 2/4. Retrying...
+Timeout on attempt 3/4. Retrying...

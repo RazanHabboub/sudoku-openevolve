@@ -367,3 +367,161 @@ Arguments: ()
 2026-06-09 15:01:58,462 - INFO - Population size after cleanup: 50
 2026-06-09 15:01:58,462 - INFO - Iteration 82: Program 36bed486-9055-4e5a-bf0f-8d5bcd7c169b (parent: a46f4f89-fe13-44c5-a86f-c4bf5746f095) completed in 27.07s
 2026-06-09 15:01:58,463 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:02:15,513 - WARNING - Iteration 83 error: No valid diffs found in response
+2026-06-09 15:02:35,521 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 9, 'diversity': 6}
+2026-06-09 15:02:35,521 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:02:35,521 - INFO - Population size after cleanup: 50
+2026-06-09 15:02:35,521 - INFO - Iteration 84: Program 6f0d5e16-2242-4d99-a6d7-4327284e375b (parent: ee6a6a50-3250-4e92-ab88-88a6aa0f9cd6) completed in 19.99s
+2026-06-09 15:02:35,522 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:02:54,597 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:02:54,597 - INFO - Population size after cleanup: 50
+2026-06-09 15:02:54,597 - INFO - Iteration 85: Program 12c0f28f-a5f6-43ec-898f-36432503d259 (parent: 9bda59e3-5330-45b1-82ea-a3076dd542f3) completed in 19.07s
+2026-06-09 15:02:54,598 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9924, combined_score=0.4377
+2026-06-09 15:03:17,458 - WARNING - Iteration 86 error: No valid diffs found in response
+2026-06-09 15:03:37,641 - WARNING - Iteration 87 error: No valid diffs found in response
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21234, Requested 12274. Please try again in 7.016s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:04:39,775 - WARNING - Iteration 88 error: No valid diffs found in response
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 27266, Requested 10067. Please try again in 14.666s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28131, Requested 10067. Please try again in 16.396s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 3/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28514, Requested 10067. Please try again in 17.162s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+All 4 attempts failed with error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21302, Requested 10067. Please try again in 2.738s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21302, Requested 10067. Please try again in 2.738s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:07:30,961 - WARNING - Iteration 89 error: LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21302, Requested 10067. Please try again in 2.738s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:07:40,226 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:07:40,227 - INFO - Population size after cleanup: 50
+2026-06-09 15:07:40,227 - INFO - Iteration 90: Program ddd51249-fc5d-4eda-8833-da8816be4a6f (parent: 5a859d99-80c0-4f61-aa0b-377403719b57) completed in 9.26s
+2026-06-09 15:07:40,227 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9938, combined_score=0.4381
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28594, Requested 12124. Please try again in 21.436s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 18859, Requested 12124. Please try again in 1.966s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Timeout on attempt 3/4. Retrying...
+All 4 attempts failed with error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21872, Requested 12124. Please try again in 7.992s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21872, Requested 12124. Please try again in 7.992s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:11:35,960 - WARNING - Iteration 91 error: LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21872, Requested 12124. Please try again in 7.992s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:11:44,107 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 0, 'diversity': 4}
+2026-06-09 15:11:44,107 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:11:44,107 - INFO - Population size after cleanup: 50
+2026-06-09 15:11:44,107 - INFO - Iteration 92: Program 801c2b4a-02ef-489a-b9fb-d971c2bf0152 (parent: 91c6fe2b-fc61-41f4-a745-e4b5842687c9) completed in 8.14s
+2026-06-09 15:11:44,107 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:12:28,521 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:12:28,522 - INFO - Population size after cleanup: 50
+2026-06-09 15:12:28,522 - INFO - Iteration 93: Program dee5d040-e228-4616-b04d-54aa11e61daa (parent: 0f0ee83c-087e-454a-94c0-9fb994ae884e) completed in 44.42s
+2026-06-09 15:12:28,522 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9935, combined_score=0.4381
+2026-06-09 15:12:52,118 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 2}
+2026-06-09 15:12:52,119 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:12:52,119 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:12:52,119 - INFO - Population size after cleanup: 50
+2026-06-09 15:12:52,119 - INFO - Iteration 94: Program 09ea6b1f-ea08-481e-899c-7c3a7c18ef26 (parent: a6587395-ec70-4200-badf-7ab56817200d) completed in 23.59s
+2026-06-09 15:12:52,119 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9935, combined_score=0.4381
+2026-06-09 15:13:12,919 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:13:12,919 - INFO - Population size after cleanup: 50
+2026-06-09 15:13:12,919 - INFO - Iteration 95: Program a978f3b2-ced2-4e9e-83d2-0e3c4b383200 (parent: fd127078-ebb3-4e55-9350-a7f5c4ca6aac) completed in 20.79s
+2026-06-09 15:13:12,920 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9884, combined_score=0.4365
+2026-06-09 15:13:32,941 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:13:32,942 - INFO - Population size after cleanup: 50
+2026-06-09 15:13:32,942 - INFO - Iteration 96: Program 4535388b-8a74-4d50-9d34-50fe9287f63b (parent: ddd51249-fc5d-4eda-8833-da8816be4a6f) completed in 20.02s
+2026-06-09 15:13:32,942 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9919, combined_score=0.4376
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 29430, Requested 11458. Please try again in 21.776s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28756, Requested 11458. Please try again in 20.428s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 3/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19586, Requested 11458. Please try again in 2.088s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+All 4 attempts failed with error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26886, Requested 11458. Please try again in 16.688s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26886, Requested 11458. Please try again in 16.688s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:16:46,316 - WARNING - Iteration 97 error: LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26886, Requested 11458. Please try again in 16.688s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:18:55,976 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:18:55,976 - INFO - Population size after cleanup: 50
+2026-06-09 15:18:55,976 - INFO - Iteration 98: Program 7b632e72-6bd0-489c-aacd-6f41a6cef02a (parent: 2584d3ce-3e1b-4509-bbd8-94315e08ba86) completed in 129.62s
+2026-06-09 15:18:55,976 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.0400, correctness=0.2480, easy_avg_time=0.0127, hard_avg_time=0.9061, expert_avg_time=1.1398, speed_score=0.7091, combined_score=0.3863
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26741, Requested 9810. Please try again in 13.102s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 20235, Requested 9810. Please try again in 90ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 3/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 21119, Requested 9810. Please try again in 1.858s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:22:24,433 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 6, 'diversity': 2} (fitness: 0.444 -> 0.446)
+2026-06-09 15:22:24,433 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:22:24,433 - INFO - Population size after cleanup: 50
+2026-06-09 15:22:24,433 - INFO - Iteration 99: Program d2643361-425c-482b-b90b-c55eb8d169ed (parent: c9a08843-d729-455b-9c18-19ee0ca7b482) completed in 206.17s
+2026-06-09 15:22:24,434 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0557, speed_score=0.9837, combined_score=0.4463
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19463, Requested 11493. Please try again in 1.912s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28801, Requested 11493. Please try again in 20.588s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 3/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26694, Requested 11493. Please try again in 16.373s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+All 4 attempts failed with error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 29383, Requested 11493. Please try again in 21.752s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 29383, Requested 11493. Please try again in 21.752s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:25:30,750 - WARNING - Iteration 100 error: LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 29383, Requested 11493. Please try again in 21.752s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:26:12,933 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:26:12,933 - INFO - Population size after cleanup: 50
+2026-06-09 15:26:12,933 - INFO - Iteration 101: Program 27b7e370-c135-489f-b912-604f45eb17de (parent: 24cc2a4c-34f2-46ee-809f-f3d10351e88e) completed in 42.18s
+2026-06-09 15:26:12,933 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.5200, correctness=0.4080, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0295, speed_score=0.9615, combined_score=0.5741
+2026-06-09 15:26:32,940 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 4}
+2026-06-09 15:26:32,940 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:26:32,940 - INFO - Population size after cleanup: 50
+2026-06-09 15:26:32,940 - INFO - Iteration 102: Program 7c18b213-7dae-4f05-a6cc-3032d8c7ff40 (parent: 4535388b-8a74-4d50-9d34-50fe9287f63b) completed in 20.00s
+2026-06-09 15:26:32,940 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19149, Requested 11972. Please try again in 2.242s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Timeout on attempt 2/4. Retrying...
+Timeout on attempt 3/4. Retrying...
+All 4 attempts failed with error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28821, Requested 11972. Please try again in 21.586s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28821, Requested 11972. Please try again in 21.586s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:30:25,502 - WARNING - Iteration 103 error: LLM generation failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28821, Requested 11972. Please try again in 21.586s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-06-09 15:30:58,275 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 5, 'diversity': 1} (fitness: 0.437 -> 0.437)
+2026-06-09 15:30:58,276 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:30:58,276 - INFO - Population size after cleanup: 50
+2026-06-09 15:30:58,276 - INFO - Iteration 104: Program f219d18f-8e5f-4ae2-b9bd-bb5215340b57 (parent: 1dda334d-7d1f-429f-b55e-542a81066fa5) completed in 32.77s
+2026-06-09 15:30:58,276 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9910, combined_score=0.4373
+2026-06-09 15:31:39,074 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 7}
+2026-06-09 15:31:39,074 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:31:39,075 - INFO - Population size after cleanup: 50
+2026-06-09 15:31:39,075 - INFO - Iteration 105: Program 63cb7c3a-c5eb-48d8-8551-184c20939a85 (parent: 5a859d99-80c0-4f61-aa0b-377403719b57) completed in 40.80s
+2026-06-09 15:31:39,075 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9934, combined_score=0.4380
+2026-06-09 15:32:01,829 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 7, 'diversity': 4}
+2026-06-09 15:32:01,829 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:32:01,829 - INFO - Population size after cleanup: 50
+2026-06-09 15:32:01,829 - INFO - Iteration 106: Program 631f6db9-1903-4dde-8f50-56745e8d7703 (parent: ea639c10-2caf-49fd-bad8-d42a69b0b05a) completed in 22.65s
+2026-06-09 15:32:01,830 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9934, combined_score=0.4380
+2026-06-09 15:32:25,186 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 5, 'diversity': 1} (fitness: 0.437 -> 0.437)
+2026-06-09 15:32:25,187 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:32:25,187 - INFO - Population size after cleanup: 50
+2026-06-09 15:32:25,187 - INFO - Iteration 107: Program 69febb76-1851-430e-88a8-7d92bba6faac (parent: f219d18f-8e5f-4ae2-b9bd-bb5215340b57) completed in 23.45s
+2026-06-09 15:32:25,188 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9912, combined_score=0.4374
+2026-06-09 15:32:46,289 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:32:46,289 - INFO - Population size after cleanup: 50
+2026-06-09 15:32:46,290 - INFO - Iteration 108: Program 407292c1-182b-4afc-b100-b77ce10103b7 (parent: d2643361-425c-482b-b90b-c55eb8d169ed) completed in 21.07s
+2026-06-09 15:32:46,290 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0397, speed_score=0.9877, combined_score=0.4475
+2026-06-09 15:33:06,585 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 1}
+2026-06-09 15:33:06,585 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:33:06,585 - INFO - Population size after cleanup: 50
+2026-06-09 15:33:06,585 - INFO - Iteration 109: Program 2ced9162-1ece-4420-bd12-cf9f94ad472f (parent: a46f4f89-fe13-44c5-a86f-c4bf5746f095) completed in 20.30s
+2026-06-09 15:33:06,586 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9945, combined_score=0.4383
+2026-06-09 15:33:22,332 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:33:22,333 - INFO - Population size after cleanup: 50
+2026-06-09 15:33:22,333 - INFO - Performing migration at iteration 110
+2026-06-09 15:33:22,334 - INFO - Performing migration between islands
+2026-06-09 15:33:22,334 - INFO - Migration completed at generation 30
+2026-06-09 15:33:22,337 - INFO - Island Status:
+2026-06-09 15:33:22,338 - INFO -  * Island 0: 13 programs, best=0.5746, avg=0.4650, diversity=531.75, gen=25 (best: cd328cc8-cbd5-436f-b15c-933060da1ba8)
+2026-06-09 15:33:22,338 - INFO -    Island 1: 11 programs, best=0.5746, avg=0.4729, diversity=289.68, gen=30 (best: 24cc2a4c-34f2-46ee-809f-f3d10351e88e)
+2026-06-09 15:33:22,338 - INFO -    Island 2: 17 programs, best=0.5746, avg=0.4699, diversity=650.57, gen=28 (best: 76c342cc-18c3-4dc2-8ef2-d643894b171a)
+2026-06-09 15:33:22,338 - INFO - Iteration 110: Program fbab27b6-9f5e-4980-b7c6-fcc10bd21335 (parent: 27b7e370-c135-489f-b912-604f45eb17de) completed in 15.74s
+2026-06-09 15:33:22,338 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9933, combined_score=0.4380
+2026-06-09 15:33:49,993 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 6, 'diversity': 4}
+2026-06-09 15:33:49,994 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:33:49,994 - INFO - Population size after cleanup: 50
+2026-06-09 15:33:49,995 - INFO - Iteration 111: Program 2c8f5f01-4a0e-469f-94e5-b01d1aff964f (parent: 6362ce61-a4c2-45de-b7b8-a306c2fa1354) completed in 27.68s
+2026-06-09 15:33:49,995 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:34:11,962 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 7, 'diversity': 5}
+2026-06-09 15:34:11,963 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:34:11,963 - INFO - Population size after cleanup: 50
+2026-06-09 15:34:11,963 - INFO - Iteration 112: Program 70b1802a-6348-4503-bcdf-9043b2ad7fc9 (parent: 8391fb7e-bcf9-4c3a-825c-769a19fd11b1) completed in 21.97s
+2026-06-09 15:34:11,963 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 20714, Requested 10630. Please try again in 2.688s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:35:44,385 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 5, 'diversity': 2}
+2026-06-09 15:35:44,386 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:35:44,386 - INFO - Population size after cleanup: 50
+2026-06-09 15:35:44,386 - INFO - Iteration 113: Program efda04d4-317b-4e84-be2b-82941e04caf9 (parent: 70e30aab-1dee-4bdb-918b-8efabf40e983) completed in 92.41s
+2026-06-09 15:35:44,386 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9901, combined_score=0.4370
+2026-06-09 15:36:03,820 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 5, 'diversity': 2}
+2026-06-09 15:36:03,820 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:36:03,820 - INFO - Population size after cleanup: 50
+2026-06-09 15:36:03,820 - INFO - Iteration 114: Program dfedc955-7874-4629-932b-6d193d370442 (parent: ddd51249-fc5d-4eda-8833-da8816be4a6f) completed in 19.44s
+2026-06-09 15:36:03,820 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9932, combined_score=0.4380
+2026-06-09 15:36:30,724 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 2}
+2026-06-09 15:36:30,724 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:36:30,724 - INFO - Population size after cleanup: 50
+2026-06-09 15:36:30,725 - INFO - Iteration 115: Program eea32a7b-058e-4eb5-aeda-1df52a14b25b (parent: 631f6db9-1903-4dde-8f50-56745e8d7703) completed in 26.89s
+2026-06-09 15:36:30,725 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9931, combined_score=0.4379

@@ -9,3 +9,293 @@
 2026-06-09 15:02:05,998 - INFO - Initialized evaluator with openevolve_evaluate.py
 2026-06-09 15:02:05,998 - INFO - Initialized OpenEvolve with solvers/baseline_backtracking.py
 2026-06-09 15:02:05,998 - INFO - Adding initial program to database
+2026-06-09 15:03:03,898 - INFO - Evaluated program d5a8e456-8fd1-49bd-96c7-4166d5651956 in 57.90s: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.6800, correctness=0.5040, easy_avg_time=0.0013, hard_avg_time=0.3145, expert_avg_time=0.1801, speed_score=0.7571, combined_score=0.5799
+2026-06-09 15:03:04,656 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-06-09 15:03:08,477 - INFO - Initialized process parallel controller with 1 workers
+2026-06-09 15:03:08,713 - INFO - Set max None tasks per child
+2026-06-09 15:03:13,939 - INFO - Started process pool with 1 processes
+2026-06-09 15:03:14,346 - INFO - Using island-based evolution with 3 islands
+2026-06-09 15:03:14,890 - INFO - Island Status:
+2026-06-09 15:03:15,662 - INFO -  * Island 0: 1 programs, best=0.5799, avg=0.5799, diversity=0.00, gen=0 (best: d5a8e456-8fd1-49bd-96c7-4166d5651956)
+2026-06-09 15:03:15,931 - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:03:16,201 - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:03:16,607 - INFO - Starting process-based evolution from iteration 1 for 500 iterations (total: 501)
+2026-06-09 15:03:30,047 - INFO - Early stopping enabled: patience=100, threshold=0.005, metric=combined_score
+2026-06-09 15:03:43,558 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-06-09 15:03:43,760 - INFO - Iteration 1: Program d86a0df9-d563-4ac9-b1b8-b3c7faeb81b8 (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 11.36s
+2026-06-09 15:03:43,854 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9809, combined_score=0.4343
+2026-06-09 15:03:52,514 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 0}
+2026-06-09 15:03:52,735 - INFO - Iteration 2: Program 06c02c77-29e4-4541-9fb4-34dda6dbfdac (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 9.02s
+2026-06-09 15:03:52,797 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0149, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.8702, combined_score=0.4011
+2026-06-09 15:04:00,574 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 9}
+2026-06-09 15:04:00,732 - INFO - Iteration 3: Program fb14b0a1-fa46-4398-a660-c50e983b69dc (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 7.48s
+2026-06-09 15:04:00,921 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0016, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9843, combined_score=0.4353
+2026-06-09 15:04:09,039 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
+2026-06-09 15:04:09,101 - INFO - Iteration 4: Program 58a30ca4-f0a8-42f9-9381-e31fb0acb84a (parent: d86a0df9-d563-4ac9-b1b8-b3c7faeb81b8) completed in 8.49s
+2026-06-09 15:04:09,149 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:04:19,287 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 9}
+2026-06-09 15:04:19,352 - INFO - Iteration 5: Program 25c90c50-fd16-4a71-bb33-856f959f2c32 (parent: 06c02c77-29e4-4541-9fb4-34dda6dbfdac) completed in 10.04s
+2026-06-09 15:04:19,379 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9917, combined_score=0.4375
+2026-06-09 15:04:33,218 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 5}
+2026-06-09 15:04:33,218 - INFO - Iteration 6: Program 1c3b3348-5155-452a-af65-a0d62a2e6edf (parent: fb14b0a1-fa46-4398-a660-c50e983b69dc) completed in 14.19s
+2026-06-09 15:04:33,218 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0888, speed_score=0.9737, combined_score=0.4433
+2026-06-09 15:04:42,746 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 1}
+2026-06-09 15:04:42,746 - INFO - Iteration 7: Program 6cfaedce-5b20-4b62-bd1a-231795d32119 (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 9.54s
+2026-06-09 15:04:42,746 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0016, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9844, combined_score=0.4353
+2026-06-09 15:05:03,058 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 9, 'diversity': 9} (fitness: 0.438 -> 0.449)
+2026-06-09 15:05:03,059 - INFO - Iteration 8: Program 467aeacb-e939-417a-8467-9462279aec98 (parent: 06c02c77-29e4-4541-9fb4-34dda6dbfdac) completed in 20.32s
+2026-06-09 15:05:03,059 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0060, speed_score=0.9915, combined_score=0.4487
+2026-06-09 15:05:17,352 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 8, 'diversity': 5} (fitness: 0.443 -> 0.444)
+2026-06-09 15:05:17,352 - INFO - Iteration 9: Program 5bf89ac1-4717-427a-895e-bb8138cfd1c0 (parent: fb14b0a1-fa46-4398-a660-c50e983b69dc) completed in 14.29s
+2026-06-09 15:05:17,353 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0862, speed_score=0.9744, combined_score=0.4435
+2026-06-09 15:05:33,729 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 3}
+2026-06-09 15:05:33,730 - INFO - Iteration 10: Program 102f7b72-f30b-4f6e-8605-6616b9cc840b (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 16.37s
+2026-06-09 15:05:33,730 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0017, hard_avg_time=0.0000, expert_avg_time=0.0852, speed_score=0.9751, combined_score=0.4437
+2026-06-09 15:05:45,775 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 8}
+2026-06-09 15:05:45,776 - INFO - Iteration 11: Program 05293238-6295-430d-adeb-056a43b3df16 (parent: 467aeacb-e939-417a-8467-9462279aec98) completed in 12.05s
+2026-06-09 15:05:45,776 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0146, speed_score=0.9907, combined_score=0.4484
+2026-06-09 15:06:01,448 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 4}
+2026-06-09 15:06:01,449 - INFO - Iteration 12: Program 5b6adbeb-3357-45d4-ab92-552543c413f3 (parent: 5bf89ac1-4717-427a-895e-bb8138cfd1c0) completed in 15.67s
+2026-06-09 15:06:01,449 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0031, hard_avg_time=0.0000, expert_avg_time=0.0920, speed_score=0.9615, combined_score=0.4397
+2026-06-09 15:06:13,329 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 2}
+2026-06-09 15:06:13,329 - INFO - Iteration 13: Program d3f15bf2-590d-4318-bed3-b4d912c717ef (parent: 6cfaedce-5b20-4b62-bd1a-231795d32119) completed in 11.87s
+2026-06-09 15:06:13,330 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0867, speed_score=0.9747, combined_score=0.4436
+2026-06-09 15:06:25,471 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 3}
+2026-06-09 15:06:25,471 - INFO - Iteration 14: Program 5a8afd26-9dd4-48e6-ae37-cd5de762a822 (parent: 467aeacb-e939-417a-8467-9462279aec98) completed in 12.15s
+2026-06-09 15:06:25,471 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9933, combined_score=0.4380
+2026-06-09 15:06:45,405 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 3}
+2026-06-09 15:06:45,406 - INFO - Iteration 15: Program b90f9779-10e5-447f-8249-3ef4421fd745 (parent: 5bf89ac1-4717-427a-895e-bb8138cfd1c0) completed in 19.92s
+2026-06-09 15:06:45,406 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0033, hard_avg_time=0.0000, expert_avg_time=0.0968, speed_score=0.9599, combined_score=0.4392
+2026-06-09 15:07:04,065 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 6, 'diversity': 2} (fitness: 0.444 -> 0.444)
+2026-06-09 15:07:04,065 - INFO - Iteration 16: Program 71466a1d-e880-4e90-a050-a70c5fcf4915 (parent: 6cfaedce-5b20-4b62-bd1a-231795d32119) completed in 18.66s
+2026-06-09 15:07:04,065 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0853, speed_score=0.9748, combined_score=0.4436
+2026-06-09 15:07:30,363 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 6}
+2026-06-09 15:07:30,363 - INFO - Iteration 17: Program e37b4275-4b90-4c79-b947-d777204fa3c6 (parent: 5a8afd26-9dd4-48e6-ae37-cd5de762a822) completed in 26.30s
+2026-06-09 15:07:30,364 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0016, hard_avg_time=0.0000, expert_avg_time=0.0143, speed_score=0.9834, combined_score=0.4462
+2026-06-09 15:07:44,655 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 6, 'diversity': 2}
+2026-06-09 15:07:44,655 - INFO - Iteration 18: Program 857cdc69-f941-432b-bbea-def2daa10411 (parent: fb14b0a1-fa46-4398-a660-c50e983b69dc) completed in 14.29s
+2026-06-09 15:07:44,655 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0864, speed_score=0.9739, combined_score=0.4434
+2026-06-09 15:08:19,947 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 1}
+2026-06-09 15:08:19,947 - INFO - Iteration 19: Program ac30c34f-4802-473a-a7fe-1b3911bb01c6 (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 35.28s
+2026-06-09 15:08:19,947 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0017, hard_avg_time=0.0000, expert_avg_time=0.0841, speed_score=0.9750, combined_score=0.4437
+2026-06-09 15:08:41,893 - INFO - Iteration 20: Program 0e2346fb-677d-46a1-a40b-0b92700912e6 (parent: 05293238-6295-430d-adeb-056a43b3df16) completed in 21.94s
+2026-06-09 15:08:41,893 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9920, combined_score=0.4376
+2026-06-09 15:09:06,582 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 7, 'diversity': 1}
+2026-06-09 15:09:06,582 - INFO - Iteration 21: Program a9f8f4b8-845d-4920-8b01-faf9caa0c34e (parent: b90f9779-10e5-447f-8249-3ef4421fd745) completed in 24.69s
+2026-06-09 15:09:06,582 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0042, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9595, combined_score=0.4278
+2026-06-09 15:09:28,843 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 2}
+2026-06-09 15:09:28,844 - INFO - Iteration 22: Program e6329586-11cb-4417-ad57-5daf5ba110bf (parent: ac30c34f-4802-473a-a7fe-1b3911bb01c6) completed in 22.26s
+2026-06-09 15:09:28,844 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0017, hard_avg_time=0.0000, expert_avg_time=0.0861, speed_score=0.9748, combined_score=0.4437
+2026-06-09 15:09:51,638 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 2}
+2026-06-09 15:09:51,638 - INFO - Iteration 23: Program ad833ad0-afbe-4d83-96ae-77a1534649f4 (parent: 467aeacb-e939-417a-8467-9462279aec98) completed in 22.79s
+2026-06-09 15:09:51,638 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9930, combined_score=0.4379
+2026-06-09 15:10:17,923 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 9, 'diversity': 5}
+2026-06-09 15:10:17,923 - INFO - Iteration 24: Program 2f7bf800-1c56-458b-9a8d-555b27adafba (parent: 5b6adbeb-3357-45d4-ab92-552543c413f3) completed in 26.28s
+2026-06-09 15:10:17,923 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0033, hard_avg_time=0.0000, expert_avg_time=0.0930, speed_score=0.9601, combined_score=0.4392
+2026-06-09 15:10:39,840 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 7, 'diversity': 2}
+2026-06-09 15:10:39,840 - INFO - Iteration 25: Program b9487956-217e-494e-a91c-95dc6831fe92 (parent: ac30c34f-4802-473a-a7fe-1b3911bb01c6) completed in 21.91s
+2026-06-09 15:10:39,840 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0024, hard_avg_time=0.0000, expert_avg_time=0.1279, speed_score=0.9644, combined_score=0.4405
+2026-06-09 15:10:39,840 - INFO - Checkpoint interval reached at iteration 25
+2026-06-09 15:10:39,844 - INFO - Island Status:
+2026-06-09 15:10:39,844 - INFO -  * Island 0: 9 programs, best=0.5799, avg=0.4072, diversity=174.58, gen=9 (best: d5a8e456-8fd1-49bd-96c7-4166d5651956)
+2026-06-09 15:10:39,844 - INFO -    Island 1: 7 programs, best=0.4487, avg=0.4368, diversity=521.97, gen=8 (best: 467aeacb-e939-417a-8467-9462279aec98)
+2026-06-09 15:10:39,844 - INFO -    Island 2: 7 programs, best=0.4435, avg=0.4383, diversity=312.13, gen=8 (best: 5bf89ac1-4717-427a-895e-bb8138cfd1c0)
+2026-06-09 15:10:39,940 - INFO - Saved database with 26 programs to results\checkpoints\checkpoint_25
+2026-06-09 15:10:39,944 - INFO - Saved best program at checkpoint 25 with metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.6800, correctness=0.5040, easy_avg_time=0.0013, hard_avg_time=0.3145, expert_avg_time=0.1801, speed_score=0.7571, combined_score=0.5799
+2026-06-09 15:10:39,944 - INFO - Saved checkpoint at iteration 25 to results\checkpoints\checkpoint_25
+2026-06-09 15:10:56,806 - INFO - Iteration 26: Program 78030c76-eede-4dab-99bc-9ceb8ba918b5 (parent: ad833ad0-afbe-4d83-96ae-77a1534649f4) completed in 16.96s
+2026-06-09 15:10:56,807 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:11:28,560 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 2}
+2026-06-09 15:11:28,560 - INFO - Iteration 27: Program 90bd1f96-67de-4526-8ba5-9ac7c5a417de (parent: 5bf89ac1-4717-427a-895e-bb8138cfd1c0) completed in 31.76s
+2026-06-09 15:11:28,560 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0050, hard_avg_time=0.0000, expert_avg_time=0.1388, speed_score=0.9408, combined_score=0.4335
+2026-06-09 15:11:45,849 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 4}
+2026-06-09 15:11:45,849 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:11:45,849 - INFO - Performing migration at iteration 28
+2026-06-09 15:11:45,849 - INFO - Performing migration between islands
+2026-06-09 15:11:45,851 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 0, 'diversity': 9}
+2026-06-09 15:11:45,851 - INFO - Program f6ae910b migrated to island 1
+2026-06-09 15:11:45,852 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 0, 'diversity': 9}
+2026-06-09 15:11:45,852 - INFO - Program db986770 migrated to island 2
+2026-06-09 15:11:45,852 - INFO - Migration completed at generation 10
+2026-06-09 15:11:45,856 - INFO - Island Status:
+2026-06-09 15:11:45,856 - INFO -  * Island 0: 10 programs, best=0.5799, avg=0.4100, diversity=233.17, gen=10 (best: d5a8e456-8fd1-49bd-96c7-4166d5651956)
+2026-06-09 15:11:45,856 - INFO -    Island 1: 9 programs, best=0.5799, avg=0.4042, diversity=521.97, gen=9 (best: f6ae910b-96e7-46e9-b263-546961039fa9)
+2026-06-09 15:11:45,857 - INFO -    Island 2: 9 programs, best=0.5799, avg=0.4535, diversity=282.32, gen=9 (best: db986770-0754-479a-b3d4-ee22c3232537)
+2026-06-09 15:11:45,857 - INFO - Iteration 28: Program 8dcc6998-07e1-49fd-81eb-9bb2346b54f1 (parent: 58a30ca4-f0a8-42f9-9381-e31fb0acb84a) completed in 17.28s
+2026-06-09 15:11:45,857 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0016, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9845, combined_score=0.4353
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19737, Requested 11092. Please try again in 1.658s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 28606, Requested 11092. Please try again in 19.396s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:13:57,824 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 7}
+2026-06-09 15:13:57,824 - INFO - Iteration 29: Program 16178418-43de-4a13-a6e9-9fa979f8aed5 (parent: 5a8afd26-9dd4-48e6-ae37-cd5de762a822) completed in 131.98s
+2026-06-09 15:13:57,824 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0212, speed_score=0.9873, combined_score=0.4474
+2026-06-09 15:14:29,408 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 7, 'diversity': 2}
+2026-06-09 15:14:29,409 - INFO - Island 2 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:14:29,409 - INFO - Iteration 30: Program 216e0b36-5e3b-410b-9187-2430667687d2 (parent: 2f7bf800-1c56-458b-9a8d-555b27adafba) completed in 31.57s
+2026-06-09 15:14:29,409 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0045, hard_avg_time=0.0000, expert_avg_time=0.1317, speed_score=0.9451, combined_score=0.4347
+2026-06-09 15:14:46,748 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.441 -> 0.441)
+2026-06-09 15:14:46,748 - INFO - Iteration 31: Program d311dbbf-23ed-48b8-b244-b837751e328c (parent: e6329586-11cb-4417-ad57-5daf5ba110bf) completed in 17.35s
+2026-06-09 15:14:46,748 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0024, hard_avg_time=0.0000, expert_avg_time=0.1290, speed_score=0.9651, combined_score=0.4407
+2026-06-09 15:15:04,491 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 8, 'diversity': 4}
+2026-06-09 15:15:04,492 - INFO - Iteration 32: Program 41058d9e-f210-4bfb-9d11-df3e7d9df824 (parent: 05293238-6295-430d-adeb-056a43b3df16) completed in 17.73s
+2026-06-09 15:15:04,492 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0218, speed_score=0.9862, combined_score=0.4471
+2026-06-09 15:15:36,492 - INFO - Iteration 33: Program 790bcbe9-a765-430a-85e8-20511c2d8942 (parent: 857cdc69-f941-432b-bbea-def2daa10411) completed in 32.00s
+2026-06-09 15:15:36,493 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0046, hard_avg_time=0.0000, expert_avg_time=0.1264, speed_score=0.9450, combined_score=0.4347
+2026-06-09 15:15:51,202 - INFO - Iteration 34: Program 93d59e94-87dd-4d21-919c-a68138e1ab16 (parent: 8dcc6998-07e1-49fd-81eb-9bb2346b54f1) completed in 14.70s
+2026-06-09 15:15:51,202 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0024, hard_avg_time=0.0000, expert_avg_time=0.1330, speed_score=0.9647, combined_score=0.4406
+2026-06-09 15:16:09,467 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 6, 'diversity': 2}
+2026-06-09 15:16:09,467 - INFO - Island 1 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:16:09,468 - INFO - Iteration 35: Program cfdedbe8-23c4-4ef5-8326-07471264aedc (parent: 06c02c77-29e4-4541-9fb4-34dda6dbfdac) completed in 18.27s
+2026-06-09 15:16:09,468 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0231, speed_score=0.9872, combined_score=0.4474
+2026-06-09 15:16:45,547 - INFO - Iteration 36: Program ae361ef0-ac0b-4279-aa66-6352a0de8d7b (parent: 857cdc69-f941-432b-bbea-def2daa10411) completed in 36.07s
+2026-06-09 15:16:45,548 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0044, hard_avg_time=0.0000, expert_avg_time=0.1420, speed_score=0.9452, combined_score=0.4348
+2026-06-09 15:16:59,179 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.441 -> 0.441)
+2026-06-09 15:16:59,179 - INFO - Iteration 37: Program a49e00d2-325e-4abd-87c4-b5b48367efd2 (parent: d86a0df9-d563-4ac9-b1b8-b3c7faeb81b8) completed in 13.63s
+2026-06-09 15:16:59,179 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0022, hard_avg_time=0.0000, expert_avg_time=0.1315, speed_score=0.9665, combined_score=0.4412
+2026-06-09 15:17:35,514 - INFO - Iteration 38: Program c76eff90-90cb-4817-a3bb-a564d8d0b16e (parent: ad833ad0-afbe-4d83-96ae-77a1534649f4) completed in 36.33s
+2026-06-09 15:17:35,514 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:17:57,854 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 5, 'diversity': 1}
+2026-06-09 15:17:57,854 - INFO - Iteration 39: Program e41e1f32-23fa-436e-bc1c-cabe75fce4de (parent: db986770-0754-479a-b3d4-ee22c3232537) completed in 22.34s
+2026-06-09 15:17:57,854 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0865, speed_score=0.9734, combined_score=0.4432
+2026-06-09 15:18:19,242 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.441 -> 0.443)
+2026-06-09 15:18:19,243 - INFO - Iteration 40: Program 4a991506-4660-404c-96b5-1ba4dadfbbd3 (parent: a49e00d2-325e-4abd-87c4-b5b48367efd2) completed in 21.39s
+2026-06-09 15:18:19,243 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0940, speed_score=0.9737, combined_score=0.4433
+2026-06-09 15:18:37,847 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 4, 'diversity': 3}
+2026-06-09 15:18:37,847 - INFO - Iteration 41: Program 18af1391-e7d5-452f-aa3c-222bb3f65503 (parent: ad833ad0-afbe-4d83-96ae-77a1534649f4) completed in 18.60s
+2026-06-09 15:18:37,848 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9932, combined_score=0.4380
+2026-06-09 15:19:06,744 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.435 -> 0.443)
+2026-06-09 15:19:06,745 - INFO - Iteration 42: Program 067aa610-9999-491f-9da9-f234f0b73f63 (parent: e41e1f32-23fa-436e-bc1c-cabe75fce4de) completed in 28.91s
+2026-06-09 15:19:06,745 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0883, speed_score=0.9735, combined_score=0.4432
+2026-06-09 15:19:22,694 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 2}
+2026-06-09 15:19:22,695 - INFO - Iteration 43: Program 74847e93-5eff-4bee-997e-77863ed8b065 (parent: 93d59e94-87dd-4d21-919c-a68138e1ab16) completed in 15.95s
+2026-06-09 15:19:22,695 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0017, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9837, combined_score=0.4351
+2026-06-09 15:19:45,451 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 5, 'diversity': 1}
+2026-06-09 15:19:45,451 - INFO - Iteration 44: Program 7b74fae8-7fa8-4086-8028-5fc50e99ea83 (parent: 467aeacb-e939-417a-8467-9462279aec98) completed in 22.75s
+2026-06-09 15:19:45,451 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9932, combined_score=0.4379
+2026-06-09 15:20:12,329 - INFO - Iteration 45: Program d2ade316-eafb-489b-ad1a-7d91863bffb7 (parent: 5b6adbeb-3357-45d4-ab92-552543c413f3) completed in 26.88s
+2026-06-09 15:20:12,329 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0034, hard_avg_time=0.0000, expert_avg_time=0.0963, speed_score=0.9587, combined_score=0.4388
+2026-06-09 15:20:27,290 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.443 -> 0.443)
+2026-06-09 15:20:27,290 - INFO - Iteration 46: Program f1dae23e-77bf-49b4-ae88-74cba7babf9b (parent: d86a0df9-d563-4ac9-b1b8-b3c7faeb81b8) completed in 14.96s
+2026-06-09 15:20:27,290 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0877, speed_score=0.9742, combined_score=0.4435
+2026-06-09 15:20:47,004 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 7, 'diversity': 2} (fitness: 0.438 -> 0.448)
+2026-06-09 15:20:47,004 - INFO - Iteration 47: Program 738b5025-93a5-4864-be9c-8416d0534062 (parent: f6ae910b-96e7-46e9-b263-546961039fa9) completed in 19.70s
+2026-06-09 15:20:47,004 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0161, speed_score=0.9902, combined_score=0.4483
+2026-06-09 15:21:18,158 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:21:18,159 - INFO - Population size after cleanup: 50
+2026-06-09 15:21:18,159 - INFO - Iteration 48: Program 012a74eb-d1b7-41de-a482-c60233c5b8fe (parent: 790bcbe9-a765-430a-85e8-20511c2d8942) completed in 31.16s
+2026-06-09 15:21:18,160 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0034, hard_avg_time=0.0000, expert_avg_time=0.0944, speed_score=0.9587, combined_score=0.4388
+2026-06-09 15:21:38,602 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 8}
+2026-06-09 15:21:38,602 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:21:38,603 - INFO - Population size after cleanup: 50
+2026-06-09 15:21:38,603 - INFO - Iteration 49: Program a7f21d2a-5c5a-4005-8cd8-631769cb7388 (parent: 93d59e94-87dd-4d21-919c-a68138e1ab16) completed in 20.43s
+2026-06-09 15:21:38,604 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0025, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9752, combined_score=0.4326
+2026-06-09 15:21:59,569 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 8, 'diversity': 5}
+2026-06-09 15:21:59,570 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:21:59,570 - INFO - Population size after cleanup: 50
+2026-06-09 15:21:59,570 - INFO - Iteration 50: Program b8a45c67-5c92-4904-9b34-b0dd27e92bbd (parent: 5a8afd26-9dd4-48e6-ae37-cd5de762a822) completed in 20.97s
+2026-06-09 15:21:59,570 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0181, speed_score=0.9891, combined_score=0.4479
+2026-06-09 15:21:59,570 - INFO - Checkpoint interval reached at iteration 50
+2026-06-09 15:21:59,573 - INFO - Island Status:
+2026-06-09 15:21:59,573 - INFO -  * Island 0: 12 programs, best=0.5799, avg=0.4509, diversity=260.03, gen=17 (best: d5a8e456-8fd1-49bd-96c7-4166d5651956)
+2026-06-09 15:21:59,573 - INFO -    Island 1: 14 programs, best=0.5799, avg=0.4510, diversity=621.60, gen=17 (best: f6ae910b-96e7-46e9-b263-546961039fa9)
+2026-06-09 15:21:59,574 - INFO -    Island 2: 15 programs, best=0.5799, avg=0.4477, diversity=203.07, gen=16 (best: db986770-0754-479a-b3d4-ee22c3232537)
+2026-06-09 15:21:59,740 - INFO - Saved database with 50 programs to results\checkpoints\checkpoint_50
+2026-06-09 15:21:59,743 - INFO - Saved best program at checkpoint 50 with metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.6800, correctness=0.5040, easy_avg_time=0.0013, hard_avg_time=0.3145, expert_avg_time=0.1801, speed_score=0.7571, combined_score=0.5799
+2026-06-09 15:21:59,743 - INFO - Saved checkpoint at iteration 50 to results\checkpoints\checkpoint_50
+2026-06-09 15:22:26,781 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:22:26,782 - INFO - Population size after cleanup: 50
+2026-06-09 15:22:26,782 - INFO - Iteration 51: Program 0e7f763b-63a0-4d37-8847-02bce1d9fa28 (parent: 5b6adbeb-3357-45d4-ab92-552543c413f3) completed in 27.20s
+2026-06-09 15:22:26,782 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0021, hard_avg_time=0.0000, expert_avg_time=0.1379, speed_score=0.9671, combined_score=0.4413
+2026-06-09 15:23:03,801 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 1}
+2026-06-09 15:23:03,801 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:23:03,801 - INFO - Population size after cleanup: 50
+2026-06-09 15:23:03,801 - INFO - Iteration 52: Program 91f20d3d-f9af-4123-b833-7465d3267db6 (parent: d5a8e456-8fd1-49bd-96c7-4166d5651956) completed in 37.02s
+2026-06-09 15:23:03,802 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0879, speed_score=0.9733, combined_score=0.4432
+2026-06-09 15:23:30,288 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 8, 'diversity': 5} (fitness: 0.448 -> 0.448)
+2026-06-09 15:23:30,288 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:23:30,288 - INFO - Population size after cleanup: 50
+2026-06-09 15:23:30,289 - INFO - Iteration 53: Program 316483b2-bc86-4b00-8152-569f9c3ad3d0 (parent: b8a45c67-5c92-4904-9b34-b0dd27e92bbd) completed in 26.48s
+2026-06-09 15:23:30,289 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0253, speed_score=0.9892, combined_score=0.4479
+2026-06-09 15:23:52,007 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:23:52,007 - INFO - Population size after cleanup: 50
+2026-06-09 15:23:52,007 - INFO - Iteration 54: Program b12c7e34-d260-40b7-9373-5e568f6af504 (parent: 5b6adbeb-3357-45d4-ab92-552543c413f3) completed in 21.73s
+2026-06-09 15:23:52,007 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0886, speed_score=0.9729, combined_score=0.4431
+2026-06-09 15:24:20,018 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 8}
+2026-06-09 15:24:20,019 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:24:20,019 - INFO - Population size after cleanup: 50
+2026-06-09 15:24:20,019 - INFO - Iteration 55: Program a2fabe4d-f46c-4e61-9439-2ec1a3054e40 (parent: ac30c34f-4802-473a-a7fe-1b3911bb01c6) completed in 28.00s
+2026-06-09 15:24:20,019 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0020, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9805, combined_score=0.4342
+2026-06-09 15:24:36,712 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 4}
+2026-06-09 15:24:36,712 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:24:36,712 - INFO - Population size after cleanup: 50
+2026-06-09 15:24:36,713 - INFO - Iteration 56: Program 82447b68-d577-495d-9eb9-0dc2c4c66a3e (parent: cfdedbe8-23c4-4ef5-8326-07471264aedc) completed in 16.69s
+2026-06-09 15:24:36,713 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0150, speed_score=0.9904, combined_score=0.4483
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 24212, Requested 9540. Please try again in 7.504s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 26857, Requested 9540. Please try again in 12.794s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:26:44,199 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:26:44,199 - INFO - Population size after cleanup: 50
+2026-06-09 15:26:44,199 - INFO - Iteration 57: Program 6f05602a-6147-4099-b57c-3d6cd4169ae9 (parent: b90f9779-10e5-447f-8249-3ef4421fd745) completed in 127.48s
+2026-06-09 15:26:44,199 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0034, hard_avg_time=0.0000, expert_avg_time=0.0953, speed_score=0.9585, combined_score=0.4387
+2026-06-09 15:27:18,255 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:27:18,255 - INFO - Population size after cleanup: 50
+2026-06-09 15:27:18,255 - INFO - Performing migration at iteration 58
+2026-06-09 15:27:18,256 - INFO - Performing migration between islands
+2026-06-09 15:27:18,256 - INFO - Migration completed at generation 20
+2026-06-09 15:27:18,258 - INFO - Island Status:
+2026-06-09 15:27:18,258 - INFO -  * Island 0: 12 programs, best=0.5799, avg=0.4526, diversity=261.83, gen=20 (best: d5a8e456-8fd1-49bd-96c7-4166d5651956)
+2026-06-09 15:27:18,258 - INFO -    Island 1: 14 programs, best=0.5799, avg=0.4544, diversity=285.78, gen=19 (best: f6ae910b-96e7-46e9-b263-546961039fa9)
+2026-06-09 15:27:18,259 - INFO -    Island 2: 15 programs, best=0.5799, avg=0.4495, diversity=197.43, gen=19 (best: db986770-0754-479a-b3d4-ee22c3232537)
+2026-06-09 15:27:18,259 - INFO - Iteration 58: Program 642b04b6-0db7-4110-919c-1db8c5dc136d (parent: 8dcc6998-07e1-49fd-81eb-9bb2346b54f1) completed in 34.06s
+2026-06-09 15:27:18,259 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0938, speed_score=0.9730, combined_score=0.4431
+2026-06-09 15:27:43,526 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:27:43,526 - INFO - Population size after cleanup: 50
+2026-06-09 15:27:43,526 - INFO - Iteration 59: Program ea89fe65-e029-4a6d-81f4-baee431c72b0 (parent: 316483b2-bc86-4b00-8152-569f9c3ad3d0) completed in 25.26s
+2026-06-09 15:27:43,527 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0151, speed_score=0.9877, combined_score=0.4475
+2026-06-09 15:28:07,826 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:28:07,827 - INFO - Population size after cleanup: 50
+2026-06-09 15:28:07,827 - INFO - Iteration 60: Program 08d1544c-6a02-4a7e-88f5-5c994a67efbe (parent: 5b6adbeb-3357-45d4-ab92-552543c413f3) completed in 24.30s
+2026-06-09 15:28:07,827 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0038, hard_avg_time=0.0000, expert_avg_time=0.1647, speed_score=0.9489, combined_score=0.4359
+2026-06-09 15:28:37,584 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:28:37,584 - INFO - Population size after cleanup: 50
+2026-06-09 15:28:37,584 - INFO - Iteration 61: Program 85ee6075-b413-46c3-98cf-03c6385096a0 (parent: 71466a1d-e880-4e90-a050-a70c5fcf4915) completed in 29.76s
+2026-06-09 15:28:37,585 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0892, speed_score=0.9735, combined_score=0.4432
+2026-06-09 15:28:50,384 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:28:50,384 - INFO - Population size after cleanup: 50
+2026-06-09 15:28:50,384 - INFO - Iteration 62: Program 9a548508-114f-40d9-a576-4a9a68751c09 (parent: 82447b68-d577-495d-9eb9-0dc2c4c66a3e) completed in 12.79s
+2026-06-09 15:28:50,384 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0170, speed_score=0.9896, combined_score=0.4481
+2026-06-09 15:29:29,911 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 5, 'diversity': 2}
+2026-06-09 15:29:29,912 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:29:29,912 - INFO - Population size after cleanup: 50
+2026-06-09 15:29:29,912 - INFO - Iteration 63: Program d1f6da4f-b7d6-4c52-92a9-71b6154e2482 (parent: 6f05602a-6147-4099-b57c-3d6cd4169ae9) completed in 39.53s
+2026-06-09 15:29:29,912 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0034, hard_avg_time=0.0000, expert_avg_time=0.0960, speed_score=0.9583, combined_score=0.4387
+2026-06-09 15:29:50,641 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:29:50,642 - INFO - Population size after cleanup: 50
+2026-06-09 15:29:50,642 - INFO - Iteration 64: Program 42e2ab7e-8e84-4990-937a-82762dafe4c1 (parent: f1dae23e-77bf-49b4-ae88-74cba7babf9b) completed in 20.72s
+2026-06-09 15:29:50,642 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.1132, speed_score=0.9710, combined_score=0.4425
+2026-06-09 15:30:21,761 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:30:21,761 - INFO - Population size after cleanup: 50
+2026-06-09 15:30:21,762 - INFO - Iteration 65: Program 3e822ef3-78e3-4601-af5b-9a1bd7665f6b (parent: 16178418-43de-4a13-a6e9-9fa979f8aed5) completed in 31.12s
+2026-06-09 15:30:21,762 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0186, speed_score=0.9899, combined_score=0.4482
+2026-06-09 15:30:38,224 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:30:38,225 - INFO - Population size after cleanup: 50
+2026-06-09 15:30:38,225 - INFO - Iteration 66: Program eecf15c3-2c90-4d74-a322-02184b06c224 (parent: 012a74eb-d1b7-41de-a482-c60233c5b8fe) completed in 16.46s
+2026-06-09 15:30:38,225 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0020, hard_avg_time=0.0000, expert_avg_time=0.0946, speed_score=0.9719, combined_score=0.4428
+2026-06-09 15:30:58,468 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:30:58,469 - INFO - Population size after cleanup: 50
+2026-06-09 15:30:58,469 - INFO - Iteration 67: Program 8cb621eb-afef-44c7-ab6b-9c25e93cf09e (parent: 102f7b72-f30b-4f6e-8605-6616b9cc840b) completed in 20.23s
+2026-06-09 15:30:58,469 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0018, hard_avg_time=0.0000, expert_avg_time=0.0882, speed_score=0.9738, combined_score=0.4434
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19922, Requested 10995. Please try again in 1.834s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 2/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 20384, Requested 10995. Please try again in 2.758s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+Error on attempt 3/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 20022, Requested 10995. Please try again in 2.034s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...
+2026-06-09 15:34:15,546 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:34:15,546 - INFO - Population size after cleanup: 50
+2026-06-09 15:34:15,547 - INFO - Iteration 68: Program 9e8aef60-a91d-4fa4-b9f1-3ffb84062c25 (parent: 738b5025-93a5-4864-be9c-8416d0534062) completed in 197.08s
+2026-06-09 15:34:15,547 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0232, speed_score=0.9858, combined_score=0.4469
+2026-06-09 15:35:03,568 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:35:03,569 - INFO - Population size after cleanup: 50
+2026-06-09 15:35:03,569 - INFO - Iteration 69: Program 08aa93f4-5dd4-4123-b271-898d01b4339d (parent: 2f7bf800-1c56-458b-9a8d-555b27adafba) completed in 48.02s
+2026-06-09 15:35:03,569 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0037, hard_avg_time=0.0000, expert_avg_time=0.0969, speed_score=0.9556, combined_score=0.4379
+2026-06-09 15:35:26,436 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:35:26,436 - INFO - Population size after cleanup: 50
+2026-06-09 15:35:26,436 - INFO - Iteration 70: Program 90fcb547-192f-4e13-92ff-6cf687e26c51 (parent: 93d59e94-87dd-4d21-919c-a68138e1ab16) completed in 22.86s
+2026-06-09 15:35:26,436 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0019, hard_avg_time=0.0000, expert_avg_time=0.0975, speed_score=0.9721, combined_score=0.4428
+Error on attempt 1/4: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-E2JtH5hAuf6kpKcB2bsnXuJk on tokens per min (TPM): Limit 30000, Used 19521, Requested 11195. Please try again in 1.432s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying...

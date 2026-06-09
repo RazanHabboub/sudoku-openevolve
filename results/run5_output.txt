@@ -1,0 +1,51 @@
+2026-06-09 15:23:10,065 - INFO - Logging to results\logs\openevolve_20260609_152310.log
+2026-06-09 15:23:10,104 - INFO - Set random seed to 42 for reproducibility
+2026-06-09 15:23:10,367 - INFO - Initialized OpenAI LLM with model: gpt-4o
+2026-06-09 15:23:10,367 - INFO - Initialized LLM ensemble with models: gpt-4o (weight: 1.00)
+2026-06-09 15:23:10,413 - INFO - Initialized prompt sampler
+2026-06-09 15:23:10,427 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-09 15:23:10,429 - INFO - Initialized program database with 0 programs
+2026-06-09 15:23:10,437 - INFO - Successfully loaded evaluation function from openevolve_evaluate.py
+2026-06-09 15:23:10,439 - INFO - Initialized evaluator with openevolve_evaluate.py
+2026-06-09 15:23:10,440 - INFO - Initialized OpenEvolve with solvers/baseline_backtracking.py
+2026-06-09 15:23:10,440 - INFO - Adding initial program to database
+2026-06-09 15:24:09,922 - INFO - Evaluated program ac0ce7d5-3da8-41b6-abca-d3ebbfc5fb43 in 59.48s: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.6000, correctness=0.4720, easy_avg_time=0.0014, hard_avg_time=0.3407, expert_avg_time=0.1164, speed_score=0.8201, combined_score=0.5764
+2026-06-09 15:24:10,413 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-06-09 15:24:14,646 - INFO - Initialized process parallel controller with 1 workers
+2026-06-09 15:24:15,513 - INFO - Set max None tasks per child
+2026-06-09 15:24:18,069 - INFO - Started process pool with 1 processes
+2026-06-09 15:24:18,085 - INFO - Using island-based evolution with 3 islands
+2026-06-09 15:24:18,459 - INFO - Island Status:
+2026-06-09 15:24:18,677 - INFO -  * Island 0: 1 programs, best=0.5764, avg=0.5764, diversity=0.00, gen=0 (best: ac0ce7d5-3da8-41b6-abca-d3ebbfc5fb43)
+2026-06-09 15:24:19,120 - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:24:19,483 - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:24:19,530 - INFO - Starting process-based evolution from iteration 1 for 500 iterations (total: 501)
+2026-06-09 15:24:27,887 - INFO - Early stopping enabled: patience=100, threshold=0.005, metric=combined_score
+2026-06-09 15:24:37,336 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-06-09 15:24:37,896 - INFO - Iteration 1: Program cf7e15e8-4d40-4047-b4eb-84556f7724fc (parent: ac0ce7d5-3da8-41b6-abca-d3ebbfc5fb43) completed in 8.59s
+2026-06-09 15:24:38,240 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0029, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9721, combined_score=0.4316
+2026-06-09 15:24:44,404 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 9}
+2026-06-09 15:24:44,451 - INFO - Iteration 2: Program 5f7ba4b5-111e-4480-bd2d-a88e5221a14b (parent: ac0ce7d5-3da8-41b6-abca-d3ebbfc5fb43) completed in 6.10s
+2026-06-09 15:24:44,639 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:24:52,507 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 9, 'diversity': 9}
+2026-06-09 15:24:52,632 - INFO - Iteration 3: Program bf5b23ca-9090-4444-93ca-06639ed01e1e (parent: ac0ce7d5-3da8-41b6-abca-d3ebbfc5fb43) completed in 8.07s
+2026-06-09 15:24:52,837 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:25:00,396 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2026-06-09 15:25:00,506 - INFO - Iteration 4: Program 1a704685-5f71-4776-9ac4-e250df53f062 (parent: cf7e15e8-4d40-4047-b4eb-84556f7724fc) completed in 8.08s
+2026-06-09 15:25:00,663 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:25:10,750 - INFO - Iteration 5: Program d37ef555-90c1-4478-9f53-726579fdb268 (parent: 5f7ba4b5-111e-4480-bd2d-a88e5221a14b) completed in 10.12s
+2026-06-09 15:25:10,829 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:25:19,624 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 1}
+2026-06-09 15:25:19,654 - INFO - Iteration 6: Program e97f9e6b-3c0f-41dd-91dc-9d05f238bcfb (parent: bf5b23ca-9090-4444-93ca-06639ed01e1e) completed in 8.81s
+2026-06-09 15:25:19,718 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:25:25,048 - INFO - Iteration 7: Program 1f01ad98-6f85-4af8-bc57-5d16592fcb43 (parent: 1a704685-5f71-4776-9ac4-e250df53f062) completed in 5.50s
+2026-06-09 15:25:25,049 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:25:37,612 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 0}
+2026-06-09 15:25:37,612 - INFO - Iteration 8: Program 983e8e3b-4617-4c7f-94cb-223b1a601bfa (parent: d37ef555-90c1-4478-9f53-726579fdb268) completed in 12.55s
+2026-06-09 15:25:37,613 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:28:17,551 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 9, 'diversity': 0}
+2026-06-09 15:28:17,552 - INFO - Iteration 9: Program 4435ec86-5d5a-4d9b-80e3-6276bad3cce5 (parent: bf5b23ca-9090-4444-93ca-06639ed01e1e) completed in 159.93s
+2026-06-09 15:28:17,552 - INFO - Metrics: easy_rate=0.9800, hard_rate=0.0000, expert_rate=0.0000, correctness=0.1960, easy_avg_time=0.2320, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.3012, combined_score=0.2276
+2026-06-09 15:36:20,931 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 2}
+2026-06-09 15:36:20,931 - INFO - Iteration 10: Program 3b80c173-b743-4590-9799-536281f301c6 (parent: 1f01ad98-6f85-4af8-bc57-5d16592fcb43) completed in 480.71s
+2026-06-09 15:36:20,931 - INFO - Metrics: easy_rate=0.8000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.1600, easy_avg_time=0.9560, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0947, combined_score=0.1404
