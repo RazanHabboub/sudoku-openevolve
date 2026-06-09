@@ -1,0 +1,24 @@
+2026-06-09 15:09:53,420 - INFO - Logging to results\logs\openevolve_20260609_150953.log
+2026-06-09 15:09:53,443 - INFO - Set random seed to 42 for reproducibility
+2026-06-09 15:09:53,587 - INFO - Initialized OpenAI LLM with model: gpt-4o
+2026-06-09 15:09:53,588 - INFO - Initialized LLM ensemble with models: gpt-4o (weight: 1.00)
+2026-06-09 15:09:53,623 - INFO - Initialized prompt sampler
+2026-06-09 15:09:53,635 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-09 15:09:53,636 - INFO - Initialized program database with 0 programs
+2026-06-09 15:09:53,641 - INFO - Successfully loaded evaluation function from openevolve_evaluate.py
+2026-06-09 15:09:53,641 - INFO - Initialized evaluator with openevolve_evaluate.py
+2026-06-09 15:09:53,642 - INFO - Initialized OpenEvolve with solvers/baseline_backtracking.py
+2026-06-09 15:09:53,642 - INFO - Adding initial program to database
+2026-06-09 15:10:56,896 - INFO - Evaluated program 40753ec7-2de1-41a1-a480-5032142c76af in 63.25s: easy_rate=1.0000, hard_rate=0.1200, expert_rate=0.6800, correctness=0.5200, easy_avg_time=0.0013, hard_avg_time=0.5152, expert_avg_time=0.2999, speed_score=0.6392, combined_score=0.5557
+2026-06-09 15:10:58,202 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-06-09 15:11:02,079 - INFO - Initialized process parallel controller with 1 workers
+2026-06-09 15:11:02,459 - INFO - Set max None tasks per child
+2026-06-09 15:11:07,311 - INFO - Started process pool with 1 processes
+2026-06-09 15:11:07,855 - INFO - Using island-based evolution with 3 islands
+2026-06-09 15:11:07,916 - INFO - Island Status:
+2026-06-09 15:11:08,701 - INFO -  * Island 0: 1 programs, best=0.5557, avg=0.5557, diversity=0.00, gen=0 (best: 40753ec7-2de1-41a1-a480-5032142c76af)
+2026-06-09 15:11:08,827 - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:11:09,285 - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 15:11:09,805 - INFO - Starting process-based evolution from iteration 1 for 500 iterations (total: 501)
+2026-06-09 15:11:22,418 - INFO - Early stopping enabled: patience=100, threshold=0.005, metric=combined_score
+Evaluation timed out after 300s

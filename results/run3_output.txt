@@ -1,0 +1,11 @@
+2026-06-09 15:02:05,600 - INFO - Logging to results\logs\openevolve_20260609_150205.log
+2026-06-09 15:02:05,653 - INFO - Set random seed to 42 for reproducibility
+2026-06-09 15:02:05,939 - INFO - Initialized OpenAI LLM with model: gpt-4o
+2026-06-09 15:02:05,939 - INFO - Initialized LLM ensemble with models: gpt-4o (weight: 1.00)
+2026-06-09 15:02:05,980 - INFO - Initialized prompt sampler
+2026-06-09 15:02:05,991 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-09 15:02:05,992 - INFO - Initialized program database with 0 programs
+2026-06-09 15:02:05,998 - INFO - Successfully loaded evaluation function from openevolve_evaluate.py
+2026-06-09 15:02:05,998 - INFO - Initialized evaluator with openevolve_evaluate.py
+2026-06-09 15:02:05,998 - INFO - Initialized OpenEvolve with solvers/baseline_backtracking.py
+2026-06-09 15:02:05,998 - INFO - Adding initial program to database

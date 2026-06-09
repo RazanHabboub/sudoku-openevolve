@@ -19,7 +19,7 @@ async def main():
     config = load_config("config.yaml")
 
     oe = OpenEvolve(
-        initial_program_path="solvers/baseline_backtracking.py",
+        initial_program_path="solvers/baseline_naked_singles.py",
         evaluation_file="openevolve_evaluate.py",
         config=config,
         output_dir="results",

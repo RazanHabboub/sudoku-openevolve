@@ -1,0 +1,369 @@
+2026-06-09 14:18:39,513 - INFO - Logging to results\logs\openevolve_20260609_141839.log
+2026-06-09 14:18:39,540 - INFO - Set random seed to 42 for reproducibility
+2026-06-09 14:18:39,679 - INFO - Initialized OpenAI LLM with model: gpt-4o
+2026-06-09 14:18:39,680 - INFO - Initialized LLM ensemble with models: gpt-4o (weight: 1.00)
+2026-06-09 14:18:39,713 - INFO - Initialized prompt sampler
+2026-06-09 14:18:39,726 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-06-09 14:18:39,726 - INFO - Initialized program database with 0 programs
+2026-06-09 14:18:39,733 - INFO - Successfully loaded evaluation function from openevolve_evaluate.py
+2026-06-09 14:18:39,733 - INFO - Initialized evaluator with openevolve_evaluate.py
+2026-06-09 14:18:39,733 - INFO - Initialized OpenEvolve with solvers/baseline_backtracking.py
+2026-06-09 14:18:39,733 - INFO - Adding initial program to database
+2026-06-09 14:19:40,525 - INFO - Evaluated program e9bfa3f7-3209-416b-8159-aaed66a756cb in 60.79s: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.6400, correctness=0.4880, easy_avg_time=0.0013, hard_avg_time=0.3108, expert_avg_time=0.2543, speed_score=0.7097, combined_score=0.5545
+2026-06-09 14:19:40,732 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-06-09 14:19:43,291 - INFO - Initialized process parallel controller with 1 workers
+2026-06-09 14:19:44,244 - INFO - Set max None tasks per child
+2026-06-09 14:19:45,713 - INFO - Started process pool with 1 processes
+2026-06-09 14:19:45,808 - INFO - Using island-based evolution with 3 islands
+2026-06-09 14:19:46,490 - INFO - Island Status:
+2026-06-09 14:19:46,989 - INFO -  * Island 0: 1 programs, best=0.5545, avg=0.5545, diversity=0.00, gen=0 (best: e9bfa3f7-3209-416b-8159-aaed66a756cb)
+2026-06-09 14:19:47,140 - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 14:19:47,490 - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-06-09 14:19:47,923 - INFO - Starting process-based evolution from iteration 1 for 500 iterations (total: 501)
+2026-06-09 14:19:57,720 - INFO - Early stopping enabled: patience=100, threshold=0.005, metric=combined_score
+2026-06-09 14:20:08,259 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-06-09 14:20:08,391 - INFO - Iteration 1: Program a46f4f89-fe13-44c5-a86f-c4bf5746f095 (parent: e9bfa3f7-3209-416b-8159-aaed66a756cb) completed in 8.39s
+2026-06-09 14:20:08,474 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.2800, correctness=0.3120, easy_avg_time=0.0005, hard_avg_time=0.0000, expert_avg_time=0.0018, speed_score=0.9941, combined_score=0.5166
+2026-06-09 14:21:55,557 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 2, 'diversity': 0}
+2026-06-09 14:21:55,557 - INFO - Iteration 2: Program e04638ae-4a1a-44c8-a8d0-61520794db27 (parent: e9bfa3f7-3209-416b-8159-aaed66a756cb) completed in 107.80s
+2026-06-09 14:21:55,558 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.0000, correctness=0.2320, easy_avg_time=0.0123, hard_avg_time=0.8876, expert_avg_time=0.0000, speed_score=0.7725, combined_score=0.3942
+2026-06-09 14:23:58,146 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 6, 'diversity': 0}
+2026-06-09 14:23:58,147 - INFO - Iteration 3: Program 2ad52aba-d38a-44df-a3cc-e2dae31ab808 (parent: e9bfa3f7-3209-416b-8159-aaed66a756cb) completed in 120.27s
+2026-06-09 14:23:58,147 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.2800, correctness=0.3120, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0036, speed_score=0.9917, combined_score=0.5159
+2026-06-09 14:24:35,107 - INFO - Iteration 4: Program 73947da9-72eb-4dee-919d-5e8379230e34 (parent: a46f4f89-fe13-44c5-a86f-c4bf5746f095) completed in 35.69s
+2026-06-09 14:24:35,107 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9896, combined_score=0.4369
+2026-06-09 14:24:46,171 - WARNING - Iteration 5 error: No valid diffs found in response
+2026-06-09 14:25:05,299 - WARNING - Iteration 6 error: No valid diffs found in response
+2026-06-09 14:25:13,954 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
+2026-06-09 14:25:13,954 - INFO - Iteration 7: Program ea639c10-2caf-49fd-bad8-d42a69b0b05a (parent: 73947da9-72eb-4dee-919d-5e8379230e34) completed in 8.64s
+2026-06-09 14:25:13,954 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9914, combined_score=0.4374
+2026-06-09 14:25:19,072 - WARNING - Iteration 8 error: No valid diffs found in response
+2026-06-09 14:25:29,383 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 4, 'diversity': 1}
+2026-06-09 14:25:29,384 - INFO - Iteration 9: Program 84932205-8643-4353-a7cf-9aa779f5e0e3 (parent: 2ad52aba-d38a-44df-a3cc-e2dae31ab808) completed in 10.31s
+2026-06-09 14:25:29,384 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:25:39,150 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 6}
+2026-06-09 14:25:39,150 - INFO - Iteration 10: Program 8391fb7e-bcf9-4c3a-825c-769a19fd11b1 (parent: 73947da9-72eb-4dee-919d-5e8379230e34) completed in 9.76s
+2026-06-09 14:25:39,150 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0123, speed_score=0.9875, combined_score=0.4475
+2026-06-09 14:25:47,476 - WARNING - Iteration 11 error: No valid diffs found in response
+2026-06-09 14:25:55,285 - WARNING - Iteration 12 error: No valid diffs found in response
+2026-06-09 14:26:03,953 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 6}
+2026-06-09 14:26:03,953 - INFO - Iteration 13: Program b1074e70-4d6c-4c2d-8170-913ec7c7ad55 (parent: 73947da9-72eb-4dee-919d-5e8379230e34) completed in 8.67s
+2026-06-09 14:26:03,953 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:26:11,143 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 2, 'diversity': 2}
+2026-06-09 14:26:11,143 - INFO - Iteration 14: Program 26138a37-41ff-4a60-897b-eafbe76f33de (parent: e04638ae-4a1a-44c8-a8d0-61520794db27) completed in 7.18s
+2026-06-09 14:26:11,143 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9915, combined_score=0.4374
+2026-06-09 14:26:18,634 - WARNING - Iteration 15 error: No valid diffs found in response
+2026-06-09 14:26:23,688 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 4}
+2026-06-09 14:26:23,688 - INFO - Iteration 16: Program cf13b084-0ded-43b8-9cca-ba06eddaa83b (parent: 8391fb7e-bcf9-4c3a-825c-769a19fd11b1) completed in 5.05s
+2026-06-09 14:26:23,688 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9898, combined_score=0.4370
+2026-06-09 14:26:29,949 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 3}
+2026-06-09 14:26:29,949 - INFO - Iteration 17: Program 04ef0266-5bf9-49a4-a4d0-6624f3e36116 (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 6.25s
+2026-06-09 14:26:29,950 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9904, combined_score=0.4371
+2026-06-09 14:26:41,018 - WARNING - Iteration 18 error: No valid diffs found in response
+2026-06-09 14:27:05,331 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 3}
+2026-06-09 14:27:05,331 - INFO - Iteration 19: Program f3821c13-13b2-44ef-8656-344792b10c0e (parent: 8391fb7e-bcf9-4c3a-825c-769a19fd11b1) completed in 24.31s
+2026-06-09 14:27:05,331 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:27:18,471 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 6, 'diversity': 2}
+2026-06-09 14:27:18,472 - INFO - Iteration 20: Program eb7efc6f-99b5-4d1d-aea1-9ba3cc1fe94c (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 13.14s
+2026-06-09 14:27:18,472 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9904, combined_score=0.4371
+2026-06-09 14:27:30,100 - WARNING - Iteration 21 error: No valid diffs found in response
+2026-06-09 14:27:53,944 - INFO - Iteration 22: Program 1c202c6c-e96b-4b38-b9a7-870d75d55004 (parent: b1074e70-4d6c-4c2d-8170-913ec7c7ad55) completed in 23.83s
+2026-06-09 14:27:53,944 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:29:50,621 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 0, 'diversity': 0}
+2026-06-09 14:29:50,621 - INFO - Iteration 23: Program 4539bd94-e6d8-40be-8ecc-3bf984476719 (parent: e04638ae-4a1a-44c8-a8d0-61520794db27) completed in 116.67s
+2026-06-09 14:29:50,621 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.0400, correctness=0.2480, easy_avg_time=0.0122, hard_avg_time=0.8577, expert_avg_time=1.3140, speed_score=0.7080, combined_score=0.3860
+2026-06-09 14:32:01,589 - INFO - Iteration 24: Program f4561798-ae63-426d-83a3-5c8a419ad93f (parent: 84932205-8643-4353-a7cf-9aa779f5e0e3) completed in 128.16s
+2026-06-09 14:32:01,589 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:32:12,550 - WARNING - Iteration 25 error: No valid diffs found in response
+2026-06-09 14:32:44,280 - INFO - Iteration 26: Program 368225dd-9ace-47fc-8167-7df788e9b1a9 (parent: e04638ae-4a1a-44c8-a8d0-61520794db27) completed in 31.39s
+2026-06-09 14:32:44,280 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9886, combined_score=0.4366
+2026-06-09 14:32:56,979 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 6, 'diversity': 2}
+2026-06-09 14:32:56,979 - INFO - Iteration 27: Program 32fbc816-23ed-4bef-ac0c-7d9e38ecc7bd (parent: f4561798-ae63-426d-83a3-5c8a419ad93f) completed in 12.49s
+2026-06-09 14:32:56,979 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9940, combined_score=0.4382
+2026-06-09 14:33:02,930 - INFO - Iteration 28: Program fdd2054f-c7fc-49a4-9fc5-79fa95b8fa25 (parent: b1074e70-4d6c-4c2d-8170-913ec7c7ad55) completed in 5.94s
+2026-06-09 14:33:02,930 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:33:13,963 - WARNING - Iteration 29 error: No valid diffs found in response
+2026-06-09 14:33:26,663 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 6, 'diversity': 2} (fitness: 0.438 -> 0.438)
+2026-06-09 14:33:26,663 - INFO - Iteration 30: Program 26416727-bbbf-4ccd-b95c-c0ef97e904a7 (parent: 32fbc816-23ed-4bef-ac0c-7d9e38ecc7bd) completed in 12.69s
+2026-06-09 14:33:26,664 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0005, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9948, combined_score=0.4384
+2026-06-09 14:33:43,316 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 3}
+2026-06-09 14:33:43,316 - INFO - Performing migration at iteration 31
+2026-06-09 14:33:43,316 - INFO - Performing migration between islands
+2026-06-09 14:33:43,318 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 0, 'diversity': 7}
+2026-06-09 14:33:43,318 - INFO - Program 8facb72b migrated to island 1
+2026-06-09 14:33:43,318 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 0, 'diversity': 7}
+2026-06-09 14:33:43,318 - INFO - Program c5676ad5 migrated to island 2
+2026-06-09 14:33:43,318 - INFO - Migration completed at generation 10
+2026-06-09 14:33:43,320 - INFO - Island Status:
+2026-06-09 14:33:43,320 - INFO -  * Island 0: 11 programs, best=0.5545, avg=0.2971, diversity=472.80, gen=10 (best: e9bfa3f7-3209-416b-8159-aaed66a756cb)
+2026-06-09 14:33:43,321 - INFO -    Island 1: 7 programs, best=0.5545, avg=0.4404, diversity=557.43, gen=6 (best: 8facb72b-1c56-445d-b20a-4ac4ae5c658f)
+2026-06-09 14:33:43,321 - INFO -    Island 2: 5 programs, best=0.5545, avg=0.3018, diversity=431.25, gen=5 (best: c5676ad5-b970-4671-8be4-6b7f70849023)
+2026-06-09 14:33:43,321 - INFO - Iteration 31: Program a6587395-ec70-4200-badf-7ab56817200d (parent: e9bfa3f7-3209-416b-8159-aaed66a756cb) completed in 16.49s
+2026-06-09 14:33:43,321 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0005, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9949, combined_score=0.4385
+2026-06-09 14:34:02,296 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 7, 'diversity': 3} (fitness: 0.437 -> 0.437)
+2026-06-09 14:34:02,297 - INFO - Iteration 32: Program 70e30aab-1dee-4bdb-918b-8efabf40e983 (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 19.14s
+2026-06-09 14:34:02,297 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9906, combined_score=0.4372
+2026-06-09 14:34:25,511 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 8, 'diversity': 2}
+2026-06-09 14:34:25,511 - INFO - Iteration 33: Program 0f0ee83c-087e-454a-94c0-9fb994ae884e (parent: 2ad52aba-d38a-44df-a3cc-e2dae31ab808) completed in 23.21s
+2026-06-09 14:34:25,511 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9937, combined_score=0.4381
+2026-06-09 14:34:46,399 - WARNING - Iteration 34 error: No valid diffs found in response
+2026-06-09 14:35:11,886 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 7, 'diversity': 2}
+2026-06-09 14:35:11,887 - INFO - Iteration 35: Program aeaba349-9c78-494c-858e-5b7eed4ec3ed (parent: eb7efc6f-99b5-4d1d-aea1-9ba3cc1fe94c) completed in 25.49s
+2026-06-09 14:35:11,887 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:35:34,617 - INFO - Iteration 36: Program c394d5ac-2f15-4726-8bfd-3f6065c0d1c5 (parent: f4561798-ae63-426d-83a3-5c8a419ad93f) completed in 22.72s
+2026-06-09 14:35:34,617 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:35:52,953 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 4}
+2026-06-09 14:35:52,953 - INFO - Iteration 37: Program 6e142a9c-34c3-4720-958a-88605b7300c3 (parent: cf13b084-0ded-43b8-9cca-ba06eddaa83b) completed in 18.33s
+2026-06-09 14:35:52,954 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:37:46,116 - INFO - Iteration 38: Program 91c6fe2b-fc61-41f4-a745-e4b5842687c9 (parent: 4539bd94-e6d8-40be-8ecc-3bf984476719) completed in 113.16s
+2026-06-09 14:37:46,117 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.1200, expert_rate=0.0000, correctness=0.2480, easy_avg_time=0.0121, hard_avg_time=1.0132, expert_avg_time=0.0000, speed_score=0.7079, combined_score=0.3860
+2026-06-09 14:39:53,195 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 5, 'diversity': 1}
+2026-06-09 14:39:53,195 - INFO - Iteration 39: Program bbc0eb9e-da37-4b9f-aa01-9a7183e8c099 (parent: f4561798-ae63-426d-83a3-5c8a419ad93f) completed in 125.92s
+2026-06-09 14:39:53,195 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:40:34,882 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 2}
+2026-06-09 14:40:34,883 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 14:40:34,883 - INFO - Iteration 40: Program 9a2ab05c-2a68-46a3-a89f-505a20796dd7 (parent: 73947da9-72eb-4dee-919d-5e8379230e34) completed in 40.89s
+2026-06-09 14:40:34,883 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9906, combined_score=0.4372
+2026-06-09 14:40:52,544 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 6}
+2026-06-09 14:40:52,545 - INFO - Iteration 41: Program 0cab614c-3abb-4d16-8897-0afccf199397 (parent: 70e30aab-1dee-4bdb-918b-8efabf40e983) completed in 17.50s
+2026-06-09 14:40:52,545 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:40:58,726 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 6, 'diversity': 1}
+2026-06-09 14:40:58,727 - INFO - Iteration 42: Program 6362ce61-a4c2-45de-b7b8-a306c2fa1354 (parent: 26416727-bbbf-4ccd-b95c-c0ef97e904a7) completed in 6.17s
+2026-06-09 14:40:58,727 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0005, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9949, combined_score=0.4385
+2026-06-09 14:41:06,296 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 8, 'diversity': 2} (fitness: 0.437 -> 0.449)
+2026-06-09 14:41:06,296 - INFO - Iteration 43: Program cd349475-d325-47bc-9e33-7bcf689a6c6c (parent: 8391fb7e-bcf9-4c3a-825c-769a19fd11b1) completed in 7.57s
+2026-06-09 14:41:06,296 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0066, speed_score=0.9930, combined_score=0.4491
+2026-06-09 14:41:13,186 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 2, 'diversity': 3}
+2026-06-09 14:41:13,187 - INFO - Iteration 44: Program 7c87cc2e-c50d-4c48-9159-1555c522cc5b (parent: 8facb72b-1c56-445d-b20a-4ac4ae5c658f) completed in 6.89s
+2026-06-09 14:41:13,187 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9917, combined_score=0.4375
+2026-06-09 14:42:37,112 - INFO - Iteration 45: Program cce358a1-4254-473d-aa50-b1c6c62f933f (parent: c5676ad5-b970-4671-8be4-6b7f70849023) completed in 83.92s
+2026-06-09 14:42:37,113 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0800, expert_rate=0.5600, correctness=0.4560, easy_avg_time=0.0017, hard_avg_time=0.4417, expert_avg_time=0.2081, speed_score=0.7450, combined_score=0.5427
+2026-06-09 14:43:02,845 - WARNING - Iteration 46 error: No valid diffs found in response
+2026-06-09 14:43:37,550 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 6, 'diversity': 1}
+2026-06-09 14:43:37,551 - INFO - Island 1 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 14:43:37,551 - INFO - Iteration 47: Program fd127078-ebb3-4e55-9350-a7f5c4ca6aac (parent: 70e30aab-1dee-4bdb-918b-8efabf40e983) completed in 33.94s
+2026-06-09 14:43:37,551 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0010, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9899, combined_score=0.4370
+2026-06-09 14:43:50,416 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 5, 'diversity': 1} (fitness: 0.000 -> 0.575)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 179: character maps to <undefined>
+Call stack:
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 40, in <module>
+    asyncio.run(main())
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 712, in run_until_complete
+    self.run_forever()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 683, in run_forever
+    self._run_once()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 2042, in _run_once
+    handle._run()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 29, in main
+    best = await oe.run(iterations=config.max_iterations)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 369, in run
+    await self._run_evolution_with_checkpoints(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 515, in _run_evolution_with_checkpoints
+    await self.parallel_controller.run_evolution(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\process_parallel.py", line 565, in run_evolution
+    self.database.add(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\database.py", line 357, in add
+    self._update_best_program(program)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\database.py", line 1212, in _update_best_program
+    logger.info(
+Message: 'New best program 76c342cc-18c3-4dc2-8ef2-d643894b171a replaces e9bfa3f7-3209-416b-8159-aaed66a756cb (combined_score: 0.5545 \u2192 0.5746, +0.0201)'
+Arguments: ()
+2026-06-09 14:43:50,417 - INFO - New best program 76c342cc-18c3-4dc2-8ef2-d643894b171a replaces e9bfa3f7-3209-416b-8159-aaed66a756cb (combined_score: 0.5545 \u2192 0.5746, +0.0201)
+2026-06-09 14:43:50,452 - INFO - Iteration 48: Program 76c342cc-18c3-4dc2-8ef2-d643894b171a (parent: 6362ce61-a4c2-45de-b7b8-a306c2fa1354) completed in 12.77s
+2026-06-09 14:43:50,452 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.5200, correctness=0.4080, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0281, speed_score=0.9633, combined_score=0.5746
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f31f' in position 63: character maps to <undefined>
+Call stack:
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 40, in <module>
+    asyncio.run(main())
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 712, in run_until_complete
+    self.run_forever()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 683, in run_forever
+    self._run_once()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\base_events.py", line 2042, in _run_once
+    handle._run()
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\annaj\sudoku-openevolve\evolve.py", line 29, in main
+    best = await oe.run(iterations=config.max_iterations)
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 369, in run
+    await self._run_evolution_with_checkpoints(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\controller.py", line 515, in _run_evolution_with_checkpoints
+    await self.parallel_controller.run_evolution(
+  File "C:\Users\annaj\miniconda3\envs\cs6501\Lib\site-packages\openevolve\process_parallel.py", line 662, in run_evolution
+    logger.info(
+Message: '\U0001f31f New best solution found at iteration 48: 76c342cc-18c3-4dc2-8ef2-d643894b171a'
+Arguments: ()
+2026-06-09 14:43:50,452 - INFO - \U0001f31f New best solution found at iteration 48: 76c342cc-18c3-4dc2-8ef2-d643894b171a
+2026-06-09 14:43:58,090 - INFO - Iteration 49: Program cb02da93-b3f5-4eeb-801c-ced875b6590c (parent: 1c202c6c-e96b-4b38-b9a7-870d75d55004) completed in 7.68s
+2026-06-09 14:43:58,090 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:44:07,333 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 4, 'diversity': 1}
+2026-06-09 14:44:07,333 - INFO - Iteration 50: Program 034a0458-6f4f-40ff-8cb5-debc59635746 (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 9.24s
+2026-06-09 14:44:07,334 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:44:07,334 - INFO - Checkpoint interval reached at iteration 50
+2026-06-09 14:44:07,336 - INFO - Island Status:
+2026-06-09 14:44:07,336 - INFO -  * Island 0: 14 programs, best=0.5545, avg=0.2655, diversity=371.53, gen=14 (best: e9bfa3f7-3209-416b-8159-aaed66a756cb)
+2026-06-09 14:44:07,336 - INFO -    Island 1: 13 programs, best=0.5545, avg=0.3341, diversity=582.27, gen=13 (best: 8facb72b-1c56-445d-b20a-4ac4ae5c658f)
+2026-06-09 14:44:07,336 - INFO -    Island 2: 10 programs, best=0.5746, avg=0.3503, diversity=397.13, gen=11 (best: 76c342cc-18c3-4dc2-8ef2-d643894b171a)
+2026-06-09 14:44:07,435 - INFO - Saved database with 41 programs to results\checkpoints\checkpoint_50
+2026-06-09 14:44:07,437 - INFO - Saved best program at checkpoint 50 with metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.5200, correctness=0.4080, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0281, speed_score=0.9633, combined_score=0.5746
+2026-06-09 14:44:07,438 - INFO - Saved checkpoint at iteration 50 to results\checkpoints\checkpoint_50
+2026-06-09 14:44:15,475 - WARNING - Iteration 51 error: No valid diffs found in response
+2026-06-09 14:44:29,618 - WARNING - Iteration 52 error: No valid diffs found in response
+2026-06-09 14:44:48,853 - INFO - Iteration 53: Program 9d08a701-c3f2-4b82-a768-28b6373be7e7 (parent: 91c6fe2b-fc61-41f4-a745-e4b5842687c9) completed in 19.22s
+2026-06-09 14:44:48,853 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:45:09,282 - INFO - Iteration 54: Program a701d02f-9860-48a2-bcf4-807035f304ec (parent: c394d5ac-2f15-4726-8bfd-3f6065c0d1c5) completed in 20.44s
+2026-06-09 14:45:09,283 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:45:36,458 - INFO - Iteration 55: Program 07980631-86b1-4246-bee6-9fa6c5395817 (parent: cb02da93-b3f5-4eeb-801c-ced875b6590c) completed in 27.16s
+2026-06-09 14:45:36,458 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:45:56,933 - INFO - Iteration 56: Program bc9a37dc-8626-41c0-8d1a-a604cc5fd816 (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 20.48s
+2026-06-09 14:45:56,934 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9889, combined_score=0.4367
+2026-06-09 14:46:15,016 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 9, 'diversity': 9}
+2026-06-09 14:46:15,017 - INFO - Iteration 57: Program a000c480-f474-4dc2-83d0-a1bdaec8bbe8 (parent: 0f0ee83c-087e-454a-94c0-9fb994ae884e) completed in 18.08s
+2026-06-09 14:46:15,017 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9933, combined_score=0.4380
+2026-06-09 14:46:39,660 - INFO - Island 0 MAP-Elites cell improved: {'complexity': 8, 'diversity': 4} (fitness: 0.437 -> 0.438)
+2026-06-09 14:46:39,660 - INFO - Iteration 58: Program 9bda59e3-5330-45b1-82ea-a3076dd542f3 (parent: ea639c10-2caf-49fd-bad8-d42a69b0b05a) completed in 24.64s
+2026-06-09 14:46:39,660 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9927, combined_score=0.4378
+2026-06-09 14:48:41,780 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 0, 'diversity': 0} (fitness: 0.386 -> 0.388)
+2026-06-09 14:48:41,781 - INFO - Iteration 59: Program b31923a1-d1bc-4634-8fba-f07683c08223 (parent: 91c6fe2b-fc61-41f4-a745-e4b5842687c9) completed in 122.11s
+2026-06-09 14:48:41,781 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0140, hard_avg_time=0.0000, expert_avg_time=1.2929, speed_score=0.7895, combined_score=0.3880
+2026-06-09 14:51:25,867 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 6, 'diversity': 2} (fitness: 0.438 -> 0.444)
+2026-06-09 14:51:25,868 - INFO - Iteration 60: Program c9a08843-d729-455b-9c18-19ee0ca7b482 (parent: 76c342cc-18c3-4dc2-8ef2-d643894b171a) completed in 161.57s
+2026-06-09 14:51:25,868 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.1614, speed_score=0.9761, combined_score=0.4440
+2026-06-09 14:51:44,453 - INFO - Iteration 61: Program 35f47a68-d8de-4985-9ed1-3d926aee9082 (parent: fdd2054f-c7fc-49a4-9fc5-79fa95b8fa25) completed in 17.77s
+2026-06-09 14:51:44,454 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 14:52:19,337 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 1, 'diversity': 3}
+2026-06-09 14:52:19,338 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:52:19,338 - INFO - Population size after cleanup: 50
+2026-06-09 14:52:19,338 - INFO - Iteration 62: Program f7d56c0f-d43f-47cb-8d5f-c3c5fc036642 (parent: 7c87cc2e-c50d-4c48-9159-1555c522cc5b) completed in 34.58s
+2026-06-09 14:52:19,338 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:52:30,913 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 3, 'diversity': 1}
+2026-06-09 14:52:30,914 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:52:30,914 - INFO - Population size after cleanup: 50
+2026-06-09 14:52:30,914 - INFO - Iteration 63: Program ee6a6a50-3250-4e92-ab88-88a6aa0f9cd6 (parent: c5676ad5-b970-4671-8be4-6b7f70849023) completed in 11.32s
+2026-06-09 14:52:30,914 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9940, combined_score=0.4382
+2026-06-09 14:52:39,320 - WARNING - Iteration 64 error: No valid diffs found in response
+2026-06-09 14:52:48,606 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 9, 'diversity': 8}
+2026-06-09 14:52:48,607 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:52:48,607 - INFO - Population size after cleanup: 50
+2026-06-09 14:52:48,607 - INFO - Iteration 65: Program 8db4d48b-cdcd-4935-81fb-0ec27a70f8c8 (parent: aeaba349-9c78-494c-858e-5b7eed4ec3ed) completed in 9.28s
+2026-06-09 14:52:48,608 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:52:59,966 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:52:59,967 - INFO - Population size after cleanup: 50
+2026-06-09 14:52:59,967 - INFO - Iteration 66: Program 417ab74c-ee4b-4c87-b423-370342271554 (parent: c394d5ac-2f15-4726-8bfd-3f6065c0d1c5) completed in 11.36s
+2026-06-09 14:52:59,967 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:53:17,423 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 2}
+2026-06-09 14:53:17,423 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 14:53:17,424 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:53:17,424 - INFO - Population size after cleanup: 50
+2026-06-09 14:53:17,424 - INFO - Iteration 67: Program e2e8464a-e495-49e5-b82d-be150251a8b6 (parent: a6587395-ec70-4200-badf-7ab56817200d) completed in 17.44s
+2026-06-09 14:53:17,424 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0012, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9877, combined_score=0.4363
+2026-06-09 14:55:28,269 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 0, 'diversity': 0} (fitness: 0.388 -> 0.394)
+2026-06-09 14:55:28,269 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:55:28,269 - INFO - Population size after cleanup: 50
+2026-06-09 14:55:28,269 - INFO - Iteration 68: Program 2584d3ce-3e1b-4509-bbd8-94315e08ba86 (parent: e04638ae-4a1a-44c8-a8d0-61520794db27) completed in 130.84s
+2026-06-09 14:55:28,270 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0400, expert_rate=0.0000, correctness=0.2160, easy_avg_time=0.0140, hard_avg_time=0.9672, expert_avg_time=0.0000, speed_score=0.8099, combined_score=0.3942
+2026-06-09 14:56:12,645 - WARNING - Iteration 69 error: No valid diffs found in response
+2026-06-09 14:57:58,546 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:57:58,546 - INFO - Population size after cleanup: 50
+2026-06-09 14:57:58,546 - INFO - Iteration 70: Program 7c810e2e-63a7-423a-9cfa-07b2650478e8 (parent: 6e142a9c-34c3-4720-958a-88605b7300c3) completed in 104.99s
+2026-06-09 14:57:58,546 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 14:58:39,087 - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 5, 'diversity': 1}
+2026-06-09 14:58:39,088 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:58:39,088 - INFO - Population size after cleanup: 50
+2026-06-09 14:58:39,088 - INFO - Performing migration at iteration 71
+2026-06-09 14:58:39,088 - INFO - Performing migration between islands
+2026-06-09 14:58:39,091 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 1}
+2026-06-09 14:58:39,091 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 14:58:39,091 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:58:39,092 - INFO - Population size after cleanup: 50
+2026-06-09 14:58:39,092 - INFO - Program cd328cc8 migrated to island 0
+2026-06-09 14:58:39,092 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 4, 'diversity': 1} (fitness: 0.000 -> 0.575)
+2026-06-09 14:58:39,092 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:58:39,092 - INFO - Population size after cleanup: 50
+2026-06-09 14:58:39,093 - INFO - Program 24cc2a4c migrated to island 1
+2026-06-09 14:58:39,093 - INFO - Migration completed at generation 20
+2026-06-09 14:58:39,096 - INFO - Island Status:
+2026-06-09 14:58:39,096 - INFO -  * Island 0: 12 programs, best=0.5746, avg=0.3941, diversity=334.50, gen=19 (best: cd328cc8-cbd5-436f-b15c-933060da1ba8)
+2026-06-09 14:58:39,096 - INFO -    Island 1: 17 programs, best=0.5746, avg=0.3412, diversity=788.53, gen=20 (best: 24cc2a4c-34f2-46ee-809f-f3d10351e88e)
+2026-06-09 14:58:39,096 - INFO -    Island 2: 12 programs, best=0.5746, avg=0.3654, diversity=488.77, gen=16 (best: 76c342cc-18c3-4dc2-8ef2-d643894b171a)
+2026-06-09 14:58:39,096 - INFO - Iteration 71: Program 1dda334d-7d1f-429f-b55e-542a81066fa5 (parent: fd127078-ebb3-4e55-9350-a7f5c4ca6aac) completed in 39.56s
+2026-06-09 14:58:39,096 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0011, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9888, combined_score=0.4366
+2026-06-09 14:58:55,168 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 7, 'diversity': 2}
+2026-06-09 14:58:55,170 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:58:55,170 - INFO - Population size after cleanup: 50
+2026-06-09 14:58:55,171 - INFO - Iteration 72: Program 5a859d99-80c0-4f61-aa0b-377403719b57 (parent: 0f0ee83c-087e-454a-94c0-9fb994ae884e) completed in 15.76s
+2026-06-09 14:58:55,171 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0008, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9921, combined_score=0.4376
+2026-06-09 14:59:04,321 - WARNING - Iteration 73 error: No valid diffs found in response
+2026-06-09 14:59:12,120 - INFO - Island 1 MAP-Elites cell improved: {'complexity': 2, 'diversity': 2} (fitness: 0.437 -> 0.437)
+2026-06-09 14:59:12,120 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:59:12,121 - INFO - Population size after cleanup: 50
+2026-06-09 14:59:12,121 - INFO - Iteration 74: Program 258c3dba-a006-4f11-96d5-4454770a3044 (parent: 26138a37-41ff-4a60-897b-eafbe76f33de) completed in 7.80s
+2026-06-09 14:59:12,121 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0009, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9915, combined_score=0.4374
+2026-06-09 14:59:21,105 - INFO - Island 2 MAP-Elites cell improved: {'complexity': 9, 'diversity': 9} (fitness: 0.438 -> 0.449)
+2026-06-09 14:59:21,105 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 14:59:21,105 - INFO - Population size after cleanup: 50
+2026-06-09 14:59:21,105 - INFO - Iteration 75: Program a79defa9-80ce-4bb5-ba56-b4b8e120cd52 (parent: a000c480-f474-4dc2-83d0-a1bdaec8bbe8) completed in 8.98s
+2026-06-09 14:59:21,106 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0400, correctness=0.2160, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0249, speed_score=0.9915, combined_score=0.4486
+2026-06-09 14:59:21,106 - INFO - Checkpoint interval reached at iteration 75
+2026-06-09 14:59:21,108 - INFO - Island Status:
+2026-06-09 14:59:21,108 - INFO -  * Island 0: 11 programs, best=0.5746, avg=0.4299, diversity=356.70, gen=19 (best: cd328cc8-cbd5-436f-b15c-933060da1ba8)
+2026-06-09 14:59:21,108 - INFO -    Island 1: 17 programs, best=0.5746, avg=0.3412, diversity=788.53, gen=21 (best: 24cc2a4c-34f2-46ee-809f-f3d10351e88e)
+2026-06-09 14:59:21,108 - INFO -    Island 2: 12 programs, best=0.5746, avg=0.4027, diversity=456.02, gen=18 (best: 76c342cc-18c3-4dc2-8ef2-d643894b171a)
+2026-06-09 14:59:21,274 - INFO - Saved database with 50 programs to results\checkpoints\checkpoint_75
+2026-06-09 14:59:21,278 - INFO - Saved best program at checkpoint 75 with metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.5200, correctness=0.4080, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0281, speed_score=0.9633, combined_score=0.5746
+2026-06-09 14:59:21,278 - INFO - Saved checkpoint at iteration 75 to results\checkpoints\checkpoint_75
+2026-06-09 14:59:42,807 - WARNING - Iteration 76 error: No valid diffs found in response
+2026-06-09 15:00:00,227 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:00:00,227 - INFO - Population size after cleanup: 50
+2026-06-09 15:00:00,227 - INFO - Iteration 77: Program 1fd1824d-a693-4175-bdcd-e542425af8b7 (parent: 7c87cc2e-c50d-4c48-9159-1555c522cc5b) completed in 17.42s
+2026-06-09 15:00:00,227 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 15:00:26,386 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:00:26,387 - INFO - Population size after cleanup: 50
+2026-06-09 15:00:26,387 - INFO - Iteration 78: Program ce445248-ad0b-48af-9afa-84434e1f5c24 (parent: 0f0ee83c-087e-454a-94c0-9fb994ae884e) completed in 26.16s
+2026-06-09 15:00:26,387 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.2000, easy_avg_time=0.0007, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.9934, combined_score=0.4380
+2026-06-09 15:00:47,345 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 2}
+2026-06-09 15:00:47,345 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:00:47,345 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:00:47,345 - INFO - Population size after cleanup: 50
+2026-06-09 15:00:47,345 - INFO - Iteration 79: Program 01aec997-8011-4bd6-a8ea-b3f556ac8ba4 (parent: e9bfa3f7-3209-416b-8159-aaed66a756cb) completed in 20.95s
+2026-06-09 15:00:47,346 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0000, combined_score=0.0000
+2026-06-09 15:01:08,781 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:01:08,782 - INFO - Population size after cleanup: 50
+2026-06-09 15:01:08,782 - INFO - Iteration 80: Program 9bfbdf00-a9f6-4e2a-9bbf-68cda11e41b1 (parent: 1dda334d-7d1f-429f-b55e-542a81066fa5) completed in 21.43s
+2026-06-09 15:01:08,782 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000
+2026-06-09 15:01:31,393 - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 1, 'diversity': 0}
+2026-06-09 15:01:31,393 - INFO - Island 2 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-06-09 15:01:31,394 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:01:31,394 - INFO - Population size after cleanup: 50
+2026-06-09 15:01:31,394 - INFO - Iteration 81: Program dc0f9157-96e6-4b0b-ba40-b0ae3a02bbf2 (parent: 2ad52aba-d38a-44df-a3cc-e2dae31ab808) completed in 22.61s
+2026-06-09 15:01:31,394 - INFO - Metrics: easy_rate=1.0000, hard_rate=0.0000, expert_rate=0.2800, correctness=0.3120, easy_avg_time=0.0006, hard_avg_time=0.0000, expert_avg_time=0.0040, speed_score=0.9916, combined_score=0.5159
+2026-06-09 15:01:58,462 - INFO - Population size (51) exceeds limit (50), removing 1 programs
+2026-06-09 15:01:58,462 - INFO - Population size after cleanup: 50
+2026-06-09 15:01:58,462 - INFO - Iteration 82: Program 36bed486-9055-4e5a-bf0f-8d5bcd7c169b (parent: a46f4f89-fe13-44c5-a86f-c4bf5746f095) completed in 27.07s
+2026-06-09 15:01:58,463 - INFO - Metrics: easy_rate=0.0000, hard_rate=0.0000, expert_rate=0.0000, correctness=0.0000, easy_avg_time=0.0000, hard_avg_time=0.0000, expert_avg_time=0.0000, speed_score=0.0001, combined_score=0.0000

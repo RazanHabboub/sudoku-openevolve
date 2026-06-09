@@ -4,5 +4,8 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 data/archive/
+data/sudoku.csv
 data/tdoku/data/
 data/tdoku/data.zip
+results/logs/
+results/checkpoints/

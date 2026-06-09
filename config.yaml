@@ -1,5 +1,7 @@
-max_iterations: 100
-checkpoint_interval: 5
+max_iterations: 500
+checkpoint_interval: 25
+early_stopping_patience: 100
+convergence_threshold: 0.005
 log_level: INFO
 random_seed: 42
 
@@ -21,8 +23,8 @@ database:
   migration_interval: 10
 
 evaluator:
-  timeout: 300
+  timeout: 600
   cascade_evaluation: false
   parallel_evaluations: 1
 
-diff_based_evolution: true
+diff_based_evolution: false
