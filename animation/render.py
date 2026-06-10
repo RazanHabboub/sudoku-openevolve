@@ -12,28 +12,22 @@ except ImportError:
 from PIL import Image, ImageDraw, ImageFont
 
 # Frame geometry (pixels)
-_W, _H    = 500, 590
-_MARGIN   = 25
-_TOP      = 55        # top of grid
-_CELL     = 50
-_GRID_W   = _CELL * 9  # 450px
-
-# SOLVED banner sits between grid bottom and backtrack counter
-_BANNER_Y = _TOP + _GRID_W + 8    # 513
-_BANNER_H = 44
-_BT_Y     = _BANNER_Y + _BANNER_H + 16  # 573
+_W, _H   = 500, 540
+_MARGIN  = 25
+_TOP     = 58        # top of grid
+_CELL    = 50
+_GRID_W  = _CELL * 9  # 450px — grid right edge at x=475, fits in 500px canvas
 
 # Colours
-_C_CANVAS      = '#F8F8F6'   # warm off-white
-_C_BG_GIVEN    = '#D8E0F0'   # soft blue-grey for given cells
-_C_DIGIT_GIVEN = '#1A1A2E'   # deep navy
-_C_DIGIT_PLACE = '#1565C0'   # solver blue
+_C_CANVAS      = '#F8F8F6'
+_C_BG_GIVEN    = '#D8E0F0'
+_C_DIGIT_GIVEN = '#1A1A2E'
+_C_DIGIT_PLACE = '#1565C0'
 _C_GRID_THIN   = '#BBBBBB'
 _C_GRID_THICK  = '#2A2A2A'
-_C_BANNER_BG   = '#2E7D32'   # success green
-_C_BANNER_TEXT = '#FFFFFF'
+_C_SOLVED_BG   = '#2E7D32'
 _C_TITLE       = '#1A1A2E'
-_C_SUBTITLE    = '#666666'
+_C_BT          = '#CC0000'
 
 
 def _load_font(size, bold=False):
@@ -41,8 +35,8 @@ def _load_font(size, bold=False):
     if bold:
         candidates = [
             'calibrib.ttf', 'CalibriB.ttf',
-            'seguisb.ttf',              # Segoe UI Semibold
-            'segoeuib.ttf',             # Segoe UI Bold
+            'seguisb.ttf',
+            'segoeuib.ttf',
             'arialbd.ttf',
             'DejaVuSans-Bold.ttf',
             'LiberationSans-Bold.ttf',
@@ -64,9 +58,9 @@ def _load_font(size, bold=False):
 
 
 _FONT_DIGIT  = _load_font(26, bold=True)
-_FONT_TITLE  = _load_font(17, bold=True)
-_FONT_SMALL  = _load_font(13)
-_FONT_SOLVED = _load_font(22, bold=True)
+_FONT_TITLE  = _load_font(20, bold=True)
+_FONT_BT     = _load_font(15)
+_FONT_SOLVED = _load_font(24, bold=True)
 
 
 def _draw_checkmark(draw, cx, cy, size=9, color='white', width=3):
@@ -88,10 +82,10 @@ def _draw_frame(initial_grid, current, given, title, bt_count, show_solved):
 
     # ── title ────────────────────────────────────────────────────────────────
     try:
-        draw.text((_W // 2, 28), title, fill=_C_TITLE,
+        draw.text((_W // 2, 30), title, fill=_C_TITLE,
                   font=_FONT_TITLE, anchor='mm')
     except Exception:
-        draw.text((_W // 2 - len(title) * 4, 18), title, fill=_C_TITLE)
+        draw.text((_W // 2 - len(title) * 5, 20), title, fill=_C_TITLE)
 
     # ── given-cell backgrounds ────────────────────────────────────────────────
     for r, c in given:
@@ -124,36 +118,51 @@ def _draw_frame(initial_grid, current, given, title, bt_count, show_solved):
         draw.line([(x, _TOP), (x, _TOP + _GRID_W)], fill=clr, width=lw)
         draw.line([(_MARGIN, y), (_MARGIN + _GRID_W, y)], fill=clr, width=lw)
 
-    # ── SOLVED banner (below grid, never overlaps numbers) ────────────────────
+    # ── SOLVED pill — floating on grid, sized to text, "SOLVED" then checkmark
     if show_solved:
-        bx, by   = _MARGIN, _BANNER_Y
-        bx2, by2 = _MARGIN + _GRID_W, _BANNER_Y + _BANNER_H
-        radius   = _BANNER_H // 2
+        label = 'SOLVED'
+        try:
+            bbox = draw.textbbox((0, 0), label, font=_FONT_SOLVED)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        except AttributeError:
+            tw, th = 88, 24
+
+        pad_x    = 18
+        ck_space = 30   # gap + checkmark width
+        pill_w   = pad_x + tw + ck_space + pad_x
+        pill_h   = max(th + 22, 46)
+
+        gcx = _MARGIN + _GRID_W // 2   # horizontal centre of grid
+        gcy = _TOP    + _GRID_W // 2   # vertical centre of grid
+        bx, by   = gcx - pill_w // 2, gcy - pill_h // 2
+        bx2, by2 = bx + pill_w,       by + pill_h
+
         try:
             draw.rounded_rectangle([bx, by, bx2, by2],
-                                   radius=radius, fill=_C_BANNER_BG)
+                                   radius=pill_h // 2, fill=_C_SOLVED_BG)
         except AttributeError:
-            draw.rectangle([bx, by, bx2, by2], fill=_C_BANNER_BG)
+            draw.rectangle([bx, by, bx2, by2], fill=_C_SOLVED_BG)
 
-        # Geometric checkmark on the left side of the banner
-        _draw_checkmark(draw,
-                        cx=bx + 38, cy=by + _BANNER_H // 2,
-                        size=9, color='white', width=3)
-
-        # "SOLVED" text centered, nudged right of the checkmark
+        # "SOLVED" text left-aligned within pill
         try:
-            draw.text((_W // 2 + 14, by + _BANNER_H // 2), 'SOLVED',
-                      fill=_C_BANNER_TEXT, font=_FONT_SOLVED, anchor='mm')
+            draw.text((bx + pad_x, gcy), label, fill='white',
+                      font=_FONT_SOLVED, anchor='lm')
         except Exception:
-            draw.text((_W // 2 - 28, by + 12), 'SOLVED', fill=_C_BANNER_TEXT)
+            draw.text((bx + pad_x, gcy - 12), label, fill='white', font=_FONT_SOLVED)
 
-    # ── backtrack counter ─────────────────────────────────────────────────────
+        # Geometric checkmark to the right of the text
+        _draw_checkmark(draw,
+                        cx=bx + pad_x + tw + 18, cy=gcy,
+                        size=10, color='white', width=3)
+
+    # ── backtrack counter — bottom-right, red ────────────────────────────────
     bt_label = f'Backtracks: {bt_count}'
+    bt_y = _TOP + _GRID_W + 22
     try:
-        draw.text((_W // 2, _BT_Y), bt_label,
-                  fill=_C_SUBTITLE, font=_FONT_SMALL, anchor='mm')
+        draw.text((_MARGIN + _GRID_W, bt_y), bt_label,
+                  fill=_C_BT, font=_FONT_BT, anchor='rm')
     except Exception:
-        draw.text((_W // 2 - 60, _BT_Y - 8), bt_label, fill=_C_SUBTITLE)
+        draw.text((_MARGIN + _GRID_W - 120, bt_y - 8), bt_label, fill=_C_BT)
 
     return np.array(img)
 

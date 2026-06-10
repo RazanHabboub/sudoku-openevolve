@@ -76,20 +76,32 @@ def main():
             solver_results[key] = (steps, bt, label)
             print(f'  {label}: {len(steps)} steps, {bt} backtracks')
 
-        max_steps = max(len(v[0]) for v in solver_results.values())
-        if max_steps == 0:
-            max_steps = 1
         target_secs = TARGET_SECONDS[difficulty]
-        steps_per_frame = max(1, ceil(max_steps / (target_secs * args.fps)))
-        total_frames = ceil(max_steps / steps_per_frame)
-        print(f'  steps_per_frame={steps_per_frame}, total_frames={total_frames}')
+        total_frames = int(target_secs * args.fps)
+
+        if difficulty == 'easy':
+            # Shared speed: all solvers advance at the same rate.
+            # Anchor to the slowest so no solver skips ahead.
+            max_steps = max(len(v[0]) for v in solver_results.values()) or 1
+            shared_spf = max(1, ceil(max_steps / total_frames))
+            spf_map = {key: shared_spf for key, _, _ in SOLVERS}
+            print(f'  [shared] steps_per_frame={shared_spf}, total_frames={total_frames}')
+        else:
+            # Per-solver speed for hard/expert: each solver fills the full duration
+            # independently, so the best solver's moves are visible rather than
+            # appearing instantaneous next to the high-backtrack solvers.
+            spf_map = {key: max(1, ceil((len(solver_results[key][0]) or 1) / total_frames))
+                       for key, _, _ in SOLVERS}
+            print(f'  [per-solver] total_frames={total_frames}')
+            for key, _, lbl in SOLVERS:
+                print(f'    {lbl}: steps_per_frame={spf_map[key]}')
 
         clips = {}
         for key, solve_fn, label in SOLVERS:
             steps, bt, _ = solver_results[key]
             out = os.path.join(OUTPUT_DIR, f'{difficulty}_{key}.mp4')
             print(f'  Rendering {out} ...')
-            render_clip(puzzle, steps, label, out, steps_per_frame, total_frames, args.fps)
+            render_clip(puzzle, steps, label, out, spf_map[key], total_frames, args.fps)
             clips[key] = out
 
         composed_clips[difficulty] = clips
