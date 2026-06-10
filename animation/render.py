@@ -42,7 +42,7 @@ _GRID_W  = _CELL * 9  # 450px — grid right edge at x=475, fits in 500px canvas
 
 # Colours
 _C_CANVAS      = '#F8F8F6'
-_C_BG_GIVEN    = '#FFD1DC'   # baby pink for given cells
+_C_BG_GIVEN    = '#F8E6F2'   # very light magenta tint (~90% white + #B5007A)
 _C_DIGIT_GIVEN = '#1A1A2E'
 _C_DIGIT_PLACE = '#B5007A'   # magenta — clearly distinct from #CC0000 backtrack red
 _C_GRID_THIN   = '#BBBBBB'
