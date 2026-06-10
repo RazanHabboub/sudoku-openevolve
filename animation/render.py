@@ -1,4 +1,5 @@
 import os
+import urllib.request
 from math import ceil
 
 # Prefer imageio_ffmpeg's bundled binary over the system ffmpeg
@@ -11,6 +12,27 @@ except ImportError:
 # ── PIL-based frame renderer ──────────────────────────────────────────────────
 from PIL import Image, ImageDraw, ImageFont
 
+_FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fonts')
+_EPILOGUE_URL = (
+    'https://raw.githubusercontent.com/google/fonts/main/ofl/epilogue/'
+    'Epilogue%5Bwght%5D.ttf'
+)
+_EPILOGUE_PATH = os.path.join(_FONT_DIR, 'Epilogue-var.ttf')
+
+
+def _ensure_epilogue():
+    """Download Epilogue variable font to animation/fonts/ if not present."""
+    if os.path.exists(_EPILOGUE_PATH):
+        return
+    os.makedirs(_FONT_DIR, exist_ok=True)
+    try:
+        urllib.request.urlretrieve(_EPILOGUE_URL, _EPILOGUE_PATH)
+    except Exception:
+        pass
+
+
+_ensure_epilogue()
+
 # Frame geometry (pixels)
 _W, _H   = 500, 540
 _MARGIN  = 25
@@ -20,17 +42,27 @@ _GRID_W  = _CELL * 9  # 450px — grid right edge at x=475, fits in 500px canvas
 
 # Colours
 _C_CANVAS      = '#F8F8F6'
-_C_BG_GIVEN    = '#D8E0F0'
+_C_BG_GIVEN    = '#FFE0E2'   # light blush — lighter variant of #ff9196
 _C_DIGIT_GIVEN = '#1A1A2E'
-_C_DIGIT_PLACE = '#1565C0'
+_C_DIGIT_PLACE = '#C02838'   # dark rose — darker variant of #ff9196
 _C_GRID_THIN   = '#BBBBBB'
 _C_GRID_THICK  = '#2A2A2A'
-_C_SOLVED_BG   = '#2E7D32'
+_C_SOLVED_BG   = '#84CC16'   # lime green
+_C_SOLVED_TEXT = '#1A3300'   # dark text for lime pill
 _C_TITLE       = '#1A1A2E'
 _C_BT          = '#CC0000'
 
 
 def _load_font(size, bold=False):
+    # Prefer Epilogue variable font (downloaded to animation/fonts/)
+    if os.path.exists(_EPILOGUE_PATH):
+        try:
+            font = ImageFont.truetype(_EPILOGUE_PATH, size)
+            font.set_variation_by_axes([700 if bold else 400])
+            return font
+        except (IOError, OSError, AttributeError):
+            pass
+    # Fallback to system fonts
     candidates = []
     if bold:
         candidates = [
@@ -145,15 +177,15 @@ def _draw_frame(initial_grid, current, given, title, bt_count, show_solved):
 
         # "SOLVED" text left-aligned within pill
         try:
-            draw.text((bx + pad_x, gcy), label, fill='white',
+            draw.text((bx + pad_x, gcy), label, fill=_C_SOLVED_TEXT,
                       font=_FONT_SOLVED, anchor='lm')
         except Exception:
-            draw.text((bx + pad_x, gcy - 12), label, fill='white', font=_FONT_SOLVED)
+            draw.text((bx + pad_x, gcy - 12), label, fill=_C_SOLVED_TEXT, font=_FONT_SOLVED)
 
         # Geometric checkmark to the right of the text
         _draw_checkmark(draw,
                         cx=bx + pad_x + tw + 18, cy=gcy,
-                        size=10, color='white', width=3)
+                        size=10, color=_C_SOLVED_TEXT, width=3)
 
     # ── backtrack counter — bottom-right, red ────────────────────────────────
     bt_label = f'Backtracks: {bt_count}'
