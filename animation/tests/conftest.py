@@ -32,7 +32,7 @@ def is_valid_solution(grid, original):
         if set(grid[r]) != set(range(1, 10)):
             return False
     for c in range(9):
-        if set(grid[r][c] for r in range(9)) != set(range(1, 10)):
+        if set(grid[row][c] for row in range(9)) != set(range(1, 10)):
             return False
     for br in range(3):
         for bc in range(3):
