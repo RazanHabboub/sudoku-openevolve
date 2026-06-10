@@ -10,3 +10,4 @@ data/tdoku/data.zip
 results/logs/
 results/checkpoints/
 results/debug_solvers/
+output/
