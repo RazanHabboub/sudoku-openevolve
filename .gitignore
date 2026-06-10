@@ -1,5 +1,6 @@
 __pycache__/
 *.pyc
+.pytest_cache/
 .DS_Store
 .ipynb_checkpoints/
 .env
@@ -11,3 +12,4 @@ results/logs/
 results/checkpoints/
 results/debug_solvers/
 output/
+*.mp4
