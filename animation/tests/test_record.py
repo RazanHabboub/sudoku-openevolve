@@ -1,8 +1,6 @@
 import pytest
-import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from animation.tests.conftest import TEST_PUZZLE, TEST_SOLUTION, is_valid_solution
+from animation.tests.conftest import TEST_PUZZLE, is_valid_solution
 from animation.solvers import backtracking_record
 
 def test_bt_solves_correctly():
@@ -37,6 +35,7 @@ def test_bt_backtracks_matches_revert_count():
     assert bt == revert_count
 
 def test_bt_does_not_mutate_input():
-    original = [row[:] for row in TEST_PUZZLE]
-    backtracking_record.solve([row[:] for row in TEST_PUZZLE])
+    import copy
+    original = copy.deepcopy(TEST_PUZZLE)
+    backtracking_record.solve(TEST_PUZZLE)
     assert TEST_PUZZLE == original

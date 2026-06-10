@@ -1,11 +1,8 @@
-BACKTRACKS = 0
-
 def solve(grid, steps=None):
-    global BACKTRACKS
-    BACKTRACKS = 0
     if steps is None:
         steps = []
     grid = [row[:] for row in grid]
+    backtracks = 0
 
     def find_empty():
         for r in range(9):
@@ -29,7 +26,7 @@ def solve(grid, steps=None):
         return True
 
     def backtrack():
-        global BACKTRACKS
+        nonlocal backtracks
         empty = find_empty()
         if empty is None:
             return True
@@ -42,8 +39,8 @@ def solve(grid, steps=None):
                     return True
                 grid[r][c] = 0
                 steps.append((r, c, 0))
-                BACKTRACKS += 1
+                backtracks += 1
         return False
 
     result = grid if backtrack() else None
-    return result, steps, BACKTRACKS
+    return result, steps, backtracks
