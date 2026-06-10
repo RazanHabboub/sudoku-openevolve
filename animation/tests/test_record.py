@@ -66,3 +66,29 @@ def test_mrv_backtracks_matches_revert_count():
     _, steps, bt = mrv_record.solve([row[:] for row in TEST_PUZZLE])
     revert_count = sum(1 for _, _, v in steps if v == 0)
     assert bt == revert_count
+
+from animation.solvers import naked_singles_record
+
+def test_ns_solves_correctly():
+    grid, steps, bt = naked_singles_record.solve([row[:] for row in TEST_PUZZLE])
+    assert grid is not None
+    assert is_valid_solution(grid, TEST_PUZZLE)
+
+def test_ns_returns_tuple():
+    result = naked_singles_record.solve([row[:] for row in TEST_PUZZLE])
+    assert isinstance(result, tuple) and len(result) == 3
+
+def test_ns_steps_nonempty():
+    _, steps, _ = naked_singles_record.solve([row[:] for row in TEST_PUZZLE])
+    assert len(steps) > 0
+
+def test_ns_steps_valid_coords():
+    _, steps, _ = naked_singles_record.solve([row[:] for row in TEST_PUZZLE])
+    for r, c, v in steps:
+        assert 0 <= r <= 8
+        assert 0 <= c <= 8
+        assert 0 <= v <= 9
+
+def test_ns_bt_count_positive_or_zero():
+    _, _, bt = naked_singles_record.solve([row[:] for row in TEST_PUZZLE])
+    assert bt >= 0
