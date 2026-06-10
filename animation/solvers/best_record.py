@@ -4,12 +4,6 @@ def solve(grid, steps=None):
     grid = [row[:] for row in grid]
     backtracks = 0
 
-    candidates = {}
-    for r in range(9):
-        for c in range(9):
-            if grid[r][c] == 0:
-                candidates[(r, c)] = set(range(1, 10))
-
     def _get_peers(r, c):
         peers = set()
         for col in range(9):
