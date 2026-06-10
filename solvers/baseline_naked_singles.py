@@ -1,3 +1,5 @@
+BACKTRACKS = 0
+
 def solve(grid):
     """
     Sudoku solver using naked-single propagation + MRV backtracking.
@@ -30,6 +32,7 @@ def solve(grid):
         return True
 
     def backtrack():
+        global BACKTRACKS
         if not propagate():
             return False
 
@@ -53,7 +56,10 @@ def solve(grid):
                 return True
             for i in range(9):
                 grid[i][:] = saved[i]
+            BACKTRACKS += 1
 
         return False
 
+    global BACKTRACKS
+    BACKTRACKS = 0
     return grid if backtrack() else None

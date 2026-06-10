@@ -1,34 +1,38 @@
 """
-OpenEvolve evaluation bridge.
+OpenEvolve evaluation bridge -- backtrack-efficiency metric.
 
 Called by OpenEvolve with a path to a temporary solver file.
 Exposes evaluate(program_path) -> dict.
 
-Puzzle tiers (150 total):
-  easy   (100) – puzzles0_kaggle
-  hard   (25)  – puzzles5_forum_hardest_1905_11+
-  expert (25)  – puzzles6_forum_hardest_1106
+Puzzle set: 150 puzzles (100 easy / 25 hard / 25 expert), no tier weighting.
 
-Each puzzle is solved under a 1-second per-puzzle timeout enforced via a
-daemon thread; timed-out puzzles count as unsolved.
+Fitness signal:
+  - Each solved puzzle contributes its actual BACKTRACKS count.
+  - Each unsolved or timed-out puzzle contributes BACKTRACK_CAP (1,500,000).
+  - avg_bt  = sum(puzzle_bt) / num_total          (denominator = ALL puzzles)
+  - efficiency = 1 / (1 + avg_bt / SCALE)
+  - combined_score = efficiency                   (OpenEvolve maximises this)
 
-combined_score weights harder tiers more heavily to create selection
-pressure for algorithmic improvement beyond simple backtracking.
-Speed is measured only on successfully solved puzzles.
+SCALE is set to the baseline backtracking solver's avg_bt so it starts at ~0.5.
+Tier solve rates are returned as secondary metrics for logging/analysis only.
 """
 
 import csv
 import importlib.util
+import logging
 import os
+import re
 import threading
 import time
+import types
 from queue import Empty, Queue
 
-PUZZLES_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "eval_puzzles.csv")
-PUZZLE_TIMEOUT = 1.0  # seconds per puzzle
+_log = logging.getLogger(__name__)
 
-# Difficulty weights must sum to 1.0
-TIER_WEIGHTS = {"easy": 0.2, "hard": 0.4, "expert": 0.4}
+PUZZLES_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "eval_puzzles.csv")
+PUZZLE_TIMEOUT = 1.5        # seconds per puzzle
+BACKTRACK_CAP  = 1_500_000  # sentinel for unsolved / timed-out puzzles
+SCALE          = 303_708    # baseline avg_bt; efficiency ~0.50 for baseline
 
 
 def _puzzle_to_grid(puzzle_str):
@@ -56,93 +60,122 @@ def _is_valid_solution(original, solved):
     return True
 
 
-def _solve_with_timeout(solve_fn, grid, timeout):
-    """Run solve_fn in a daemon thread; return (result, elapsed) or (None, timeout) on timeout."""
+def _solve_with_timeout(solve_fn, module, grid, timeout):
+    """
+    Run solve_fn in a daemon thread.
+    Returns (result, elapsed, bt) where bt is read inside the thread
+    immediately after solve_fn returns -- safe from cross-puzzle contamination.
+    On timeout returns (None, timeout, None); caller uses BACKTRACK_CAP.
+    """
     result_q = Queue()
 
     def _target():
         t0 = time.perf_counter()
         try:
-            result_q.put((solve_fn(grid), time.perf_counter() - t0))
+            result = solve_fn(grid)
+            bt = getattr(module, "BACKTRACKS", 0)
+            result_q.put((result, time.perf_counter() - t0, bt))
         except Exception:
-            result_q.put((None, time.perf_counter() - t0))
+            result_q.put((None, time.perf_counter() - t0, 0))
 
     t = threading.Thread(target=_target, daemon=True)
     t.start()
     try:
         return result_q.get(timeout=timeout)
     except Empty:
-        return None, timeout
+        return None, timeout, None  # None bt -> caller uses BACKTRACK_CAP
+
+
+_DEBUG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "debug_solvers")
+
+
+def _load_module(program_path):
+    """Load solver module, extracting code from markdown fences if present."""
+    with open(program_path, "r", encoding="utf-8") as f:
+        raw = f.read()
+    # Extract content from ```python ... ``` or ``` ... ``` block if present.
+    # This handles Gemini responses with preamble text before the code block.
+    m = re.search(r"```(?:python)?\s*\n(.*?)```", raw, re.DOTALL)
+    if m:
+        code = m.group(1).rstrip()
+    else:
+        # No closing fence (e.g. truncated response) — strip any opening fence.
+        code = re.sub(r"^```(?:python)?\s*\n?", "", raw.strip())
+        code = code.rstrip().rstrip("`").rstrip()
+    module = types.ModuleType("evolved_solver")
+    try:
+        exec(compile(code, program_path, "exec"), module.__dict__)
+    except Exception as e:
+        # Save the failing code for post-mortem inspection.
+        try:
+            os.makedirs(_DEBUG_DIR, exist_ok=True)
+            base = os.path.basename(program_path).replace(".py", "")
+            debug_path = os.path.join(_DEBUG_DIR, f"fail_{base}_{int(time.time())}.py")
+            with open(debug_path, "w", encoding="utf-8") as df:
+                df.write(f"# Error: {e}\n# --- raw LLM output below ---\n{raw}\n# --- extracted code ---\n{code}")
+        except Exception:
+            pass
+        _log.warning("Load error for %s: %s", program_path, e)
+        raise
+    return module
 
 
 def evaluate(program_path):
     try:
-        spec = importlib.util.spec_from_file_location("evolved_solver", program_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
+        module = _load_module(program_path)
         solve_fn = module.solve
     except Exception:
         return _zero_metrics()
 
-    tier_solved = {t: 0   for t in TIER_WEIGHTS}
-    tier_total  = {t: 0   for t in TIER_WEIGHTS}
-    tier_time   = {t: 0.0 for t in TIER_WEIGHTS}  # time for solved puzzles only
+    puzzle_bt   = []
+    tier_solved = {"easy": 0, "hard": 0, "expert": 0}
+    tier_total  = {"easy": 0, "hard": 0, "expert": 0}
 
     try:
         with open(PUZZLES_CSV, newline="") as f:
             for row in csv.DictReader(f):
-                tier = row["difficulty"]
+                tier     = row["difficulty"]
                 original = _puzzle_to_grid(row["puzzle"])
                 tier_total[tier] += 1
 
-                result, elapsed = _solve_with_timeout(solve_fn, original, PUZZLE_TIMEOUT)
+                result, _elapsed, bt = _solve_with_timeout(solve_fn, module, original, PUZZLE_TIMEOUT)
 
                 if _is_valid_solution(original, result):
                     tier_solved[tier] += 1
-                    tier_time[tier] += elapsed
+                    puzzle_bt.append(bt if bt is not None else 0)
+                else:
+                    puzzle_bt.append(BACKTRACK_CAP)
     except Exception:
         return _zero_metrics()
 
-    # Per-tier solve rates
+    num_total  = len(puzzle_bt)
+    num_solved = sum(1 for bt in puzzle_bt if bt < BACKTRACK_CAP)
+    avg_bt     = sum(puzzle_bt) / num_total if num_total else float(BACKTRACK_CAP)
+    efficiency = 1.0 / (1.0 + avg_bt / SCALE)
+
     easy_rate   = tier_solved["easy"]   / tier_total["easy"]   if tier_total["easy"]   else 0.0
     hard_rate   = tier_solved["hard"]   / tier_total["hard"]   if tier_total["hard"]   else 0.0
     expert_rate = tier_solved["expert"] / tier_total["expert"] if tier_total["expert"] else 0.0
-
-    # Per-tier avg time (over solved puzzles only; 0.0 if none solved)
-    easy_avg_time   = tier_time["easy"]   / tier_solved["easy"]   if tier_solved["easy"]   else 0.0
-    hard_avg_time   = tier_time["hard"]   / tier_solved["hard"]   if tier_solved["hard"]   else 0.0
-    expert_avg_time = tier_time["expert"] / tier_solved["expert"] if tier_solved["expert"] else 0.0
-
-    # Difficulty-weighted correctness score
-    correctness = (
-        TIER_WEIGHTS["easy"]   * easy_rate +
-        TIER_WEIGHTS["hard"]   * hard_rate +
-        TIER_WEIGHTS["expert"] * expert_rate
-    )
-
-    # Speed over all solved puzzles only
-    total_solved = sum(tier_solved.values())
-    avg_time_solved = sum(tier_time.values()) / total_solved if total_solved else 999.0
-    speed_score = 1.0 / (1.0 + avg_time_solved * 10)  # 100ms → 0.50; 10ms → 0.91
-
-    combined_score = 0.7 * correctness + 0.3 * speed_score
+    solve_rate  = num_solved / num_total if num_total else 0.0
 
     return {
-        "easy_rate":        easy_rate,
-        "hard_rate":        hard_rate,
-        "expert_rate":      expert_rate,
-        "correctness":      correctness,
-        "easy_avg_time":    easy_avg_time,
-        "hard_avg_time":    hard_avg_time,
-        "expert_avg_time":  expert_avg_time,
-        "speed_score":      speed_score,
-        "combined_score":   combined_score,
+        "avg_bt":         avg_bt,
+        "efficiency":     efficiency,
+        "solve_rate":     solve_rate,
+        "easy_rate":      easy_rate,
+        "hard_rate":      hard_rate,
+        "expert_rate":    expert_rate,
+        "combined_score": efficiency,
     }
 
 
 def _zero_metrics():
     return {
-        "easy_rate": 0.0, "hard_rate": 0.0, "expert_rate": 0.0,
-        "correctness": 0.0, "easy_avg_time": 0.0, "hard_avg_time": 0.0,
-        "expert_avg_time": 0.0, "speed_score": 0.0, "combined_score": 0.0,
+        "avg_bt":         float(BACKTRACK_CAP),
+        "efficiency":     0.0,
+        "solve_rate":     0.0,
+        "easy_rate":      0.0,
+        "hard_rate":      0.0,
+        "expert_rate":    0.0,
+        "combined_score": 0.0,
     }

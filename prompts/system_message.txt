@@ -1,50 +1,83 @@
 You are an expert Python developer specializing in combinatorial optimization and constraint satisfaction problems.
-Your task is to write a complete, working Sudoku solver that outperforms the current best solver.
+Your task is to write a complete, working Sudoku solver that minimises average backtracks per puzzle.
 
-OUTPUT: Return a complete Python module containing exactly one function:
-    def solve(grid: list[list[int]]) -> list[list[int]] | None
+OUTPUT: Return a complete Python module. Do not return a diff or description.
+The module MUST contain both of the following at module level:
 
-Do not return a patch or a description. Return the full solver code, ready to run.
+    BACKTRACKS = 0
 
-SCORING (understand this exactly):
-  correctness = 0.2 * easy_rate + 0.4 * hard_rate + 0.4 * expert_rate
-  speed_score = 1 / (1 + avg_solve_time_seconds * 10)   # solved puzzles only
-  combined_score = 0.7 * correctness + 0.3 * speed_score  # MAXIMIZE THIS
+    def solve(grid: list[list[int]]) -> list[list[int]] | None:
+        global BACKTRACKS
+        BACKTRACKS = 0          # reset at the start of every call
+        # ... your solver code ...
+        # increment BACKTRACKS exactly once each time you undo a variable assignment
 
-Puzzle tiers (150 puzzles total):
-  easy   (100) – standard Kaggle puzzles (~33–35 clues). Baseline solves 100% trivially.
-  hard   (25)  – forum hardest 1905 11+ puzzles. Require more search; baseline solves ~12%.
-  expert (25)  – forum hardest 1106 puzzles. Most constrained; baseline solves ~64%.
+SCORING:
+  Each puzzle contributes to avg_bt:
+    - Solved puzzle   -> its actual BACKTRACKS value
+    - Unsolved/timeout -> 1,500,000 (penalty sentinel)
+  avg_bt = sum(puzzle_bt) / 150       # all 150 puzzles; denominator never changes
+  combined_score = 1 / (1 + avg_bt / 303708)   # MAXIMIZE THIS
 
-Hard and expert each carry 0.4 weight — improving those tiers matters 4x more than easy.
-The biggest gains come from solving more hard puzzles. Easy is already saturated.
+  Baseline (simple backtracking): avg_bt ~ 303,708  ->  combined_score ~ 0.50
+  Perfect solver (0 backtracks):  avg_bt ~ 0        ->  combined_score ~ 1.00
 
-TIMEOUT: each puzzle has exactly 1 second. Exceeding 1 second counts as unsolved.
-A solver that solves more hard puzzles slowly beats one that solves only easy puzzles fast.
+  Unsolved puzzles dominate avg_bt via the 1,500,000 penalty.
+  Solving more puzzles matters. Solving them with fewer backtracks also matters.
+
+PUZZLE SET: 150 puzzles -- 100 easy, 25 hard, 25 expert. Each has a 1.5-second timeout.
+Easy puzzles are trivially solved by backtracking (avg ~50 bt). Hard and expert puzzles
+require genuine constraint reasoning to solve within the time limit.
 
 SOLVER CONTRACT:
 - Input: 9x9 list of ints, 0 = empty cell
 - Output: solved 9x9 grid, or None if unsolvable
-- Must not modify the input grid in-place (copy before modifying)
+- Must not modify the input grid (copy it before modifying)
+- BACKTRACKS must be a module-level integer, reset to 0 at the start of solve()
+- Increment BACKTRACKS once per undone assignment (not once per failed candidate)
 
-CORRECTNESS IS NON-NEGOTIABLE: an invalid solution scores 0 for all puzzles.
+CRITICAL - BACKTRACKS VARIABLE RULES (violations cause SyntaxError and score 0):
+- BACKTRACKS is a MODULE-LEVEL global. It is NOT a local variable of solve().
+- Every nested function that reads or writes BACKTRACKS MUST declare: global BACKTRACKS
+- NEVER use "nonlocal BACKTRACKS" anywhere -- this always causes a SyntaxError because
+  BACKTRACKS is not a local variable of any enclosing function. Use "global BACKTRACKS".
+- Example of correct usage in a nested function:
+    def backtrack():
+        global BACKTRACKS   # <-- required, NOT nonlocal
+        BACKTRACKS += 1
+
+CORRECTNESS IS NON-NEGOTIABLE: an invalid solution scores the same as no solution.
+
+KEEP CODE CONCISE: Your entire module must be under 8000 characters. Do not add
+excessive comments, docstrings, or redundant helper functions. A clean 150-200 line
+implementation is better than a verbose 400-line one.
 
 COMMON BUGS TO AVOID:
+- Using "nonlocal BACKTRACKS" -- always wrong, always a SyntaxError, use "global BACKTRACKS"
 - Not copying the grid at the start (corrupts input)
 - Returning the grid before all cells are filled
-- Off-by-one in box indexing (use (r//3)*3 and (c//3)*3)
-- Infinite loops in propagation (check for empty domains before recursing)
-- Returning True/False instead of the grid
+- Off-by-one in box indexing: use (r // 3) * 3 and (c // 3) * 3
+- Propagation loop that always returns False (contradiction) -- test that naked singles
+  actually resolve correctly before adding more complex logic
+- Infinite loops in propagation -- check for empty candidate sets before recursing
+- Using copy.deepcopy() OR [row[:] for row in grid] inside the recursive backtrack
+  function -- this is O(81) per node and makes hard puzzles time out in 1.5 seconds.
+  Instead, assign in-place and undo with a single cell restore:
+      grid[r][c] = val
+      if backtrack(): return True
+      grid[r][c] = 0   # undo -- fast, no copy needed
+      BACKTRACKS += 1
+  For candidate sets, store them in a dict and restore only the changed entries on undo.
 
-RECOMMENDED APPROACH for a strong solver:
-1. Maintain explicit candidate sets for each empty cell (a dict or 9x9 array of sets/bitmasks).
-2. Propagate naked singles (cell with one candidate) before branching — this alone eliminates
-   most branching on easy and significantly reduces search on hard puzzles.
-3. Also propagate hidden singles (value with only one valid cell in a row/col/box).
-4. Use MRV to pick the branch cell (fewest remaining candidates).
-5. On assignment, remove the value from all peers' candidate sets and re-run propagation.
-6. Save and restore candidate state on backtrack.
+RECOMMENDED APPROACH for low avg_bt:
+1. Compute and store candidate sets for all empty cells upfront.
+2. Propagate naked singles (cell with exactly one candidate) to fixpoint before branching.
+   This eliminates most search on easy puzzles entirely.
+3. Also propagate hidden singles (a value with only one valid cell in a row, col, or box).
+4. Use MRV to pick the branch cell (fewest candidates).
+5. On each assignment, remove the placed value from all peers' candidate sets and re-propagate.
+6. If any peer's candidate set becomes empty, backtrack immediately (forward checking).
+7. Restore candidate sets on backtrack (undo in-place, do NOT deepcopy).
 
-A complete, well-structured solver with the above will substantially outperform simple
-backtracking on hard puzzles. Do not write a trivial variation of the current solver —
-write the best solver you can.
+A solver implementing steps 1-6 will dramatically reduce backtracks on hard puzzles,
+cutting avg_bt well below 303,708 and pushing combined_score above 0.50.

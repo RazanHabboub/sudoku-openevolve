@@ -10,6 +10,11 @@ Or via CLI:
 """
 
 import asyncio
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 from openevolve import OpenEvolve
 from openevolve.config import load_config
@@ -19,7 +24,7 @@ async def main():
     config = load_config("config.yaml")
 
     oe = OpenEvolve(
-        initial_program_path="solvers/baseline_naked_singles.py",
+        initial_program_path="solvers/baseline_backtracking.py",
         evaluation_file="openevolve_evaluate.py",
         config=config,
         output_dir="results",
