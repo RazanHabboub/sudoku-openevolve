@@ -42,9 +42,9 @@ _GRID_W  = _CELL * 9  # 450px — grid right edge at x=475, fits in 500px canvas
 
 # Colours
 _C_CANVAS      = '#F8F8F6'
-_C_BG_GIVEN    = '#F08792'   # RGB(240,135,146) — medium pink for given cells
+_C_BG_GIVEN    = '#FFD1DC'   # baby pink for given cells
 _C_DIGIT_GIVEN = '#1A1A2E'
-_C_DIGIT_PLACE = '#8B1A26'   # deep rose — darker for contrast against #CC0000 backtrack red
+_C_DIGIT_PLACE = '#B5007A'   # magenta — clearly distinct from #CC0000 backtrack red
 _C_GRID_THIN   = '#BBBBBB'
 _C_GRID_THICK  = '#2A2A2A'
 _C_SOLVED_BG   = '#84CC16'   # lime green
