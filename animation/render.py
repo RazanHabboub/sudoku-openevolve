@@ -12,7 +12,7 @@ except ImportError:
 from PIL import Image, ImageDraw, ImageFont
 
 # Frame geometry (pixels)
-_W, _H = 450, 550          # total canvas
+_W, _H = 500, 550          # total canvas
 _MARGIN = 25               # left/right margin
 _TOP = 60                  # top of grid
 _CELL = 50                 # cell size
@@ -51,7 +51,6 @@ def _draw_frame(initial_grid, current, given, title, bt_count, show_solved):
 
     # ── title ────────────────────────────────────────────────────────────────
     try:
-        tw, th = draw.textlength(title, font=_FONT_TITLE), 16
         draw.text((_W // 2, 22), title, fill='black',
                   font=_FONT_TITLE, anchor='mm')
     except Exception:
@@ -160,7 +159,7 @@ def render_clip(initial_grid, steps, title, output_path,
                     state['bt'] += 1
                 state['step_idx'] += 1
 
-            show_solved = (frame >= solved_at_frame)
+            show_solved = (frame >= solved_at_frame) or (state['step_idx'] >= len(steps))
             frame_arr   = _draw_frame(initial_grid, current, given,
                                       title, state['bt'], show_solved)
             writer.append_data(frame_arr)
